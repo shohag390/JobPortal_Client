@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "city": "Atlanta",
+    "image": "https://i.ibb.co.com/tnjrRv3/atlanta.jpg",
+    "jobs": 18
+  },
+  {
+    "id": 2,
+    "city": "Barrington",
+    "image": "https://i.ibb.co.com/j9dBbfJN/barrington.jpg",
+    "jobs": 9
+  },
+  {
+    "id": 3,
+    "city": "Durant",
+    "image": "https://i.ibb.co.com/BKZGjDsj/bessemer.jpg",
+    "jobs": 12
+  },
+  {
+    "id": 4,
+    "city": "Bessemer",
+    "image": "https://i.ibb.co.com/WvCYNCMb/durant.jpg",
+    "jobs": 6
+  }
+]

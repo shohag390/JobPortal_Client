@@ -27,7 +27,6 @@ const Categories = () => {
           <Categori key={categore?.id} categore={categore} />
         ))}
       </div>
-
       <div className="w-full flex items-center justify-center pt-6 md:pt-8 lg:pt-10 2xl:pt-12 ">
         <Link
           className="bg-[#1d4ed8] hover:bg-[#003ad8] duration-500 py-1.5 md:py-2 lg:py-3 px-6 md:px-8 lg:px-10 rounded-full text-[#ffff] text-[14px] md:text-[16px]"
