@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Software & Web Development",
+    "jobs": 1,
+    "image": "https://i.ibb.co.com/Gf3gfnfv/development-web.png",
+    "id": 1
+  },
+  {
+    "name": "Electronics Technician",
+    "jobs": 1,
+    "image": "https://i.ibb.co.com/0VzJdhwv/electrician.png",
+    "id": 2
+  },
+  {
+    "name": "Web Developer",
+    "jobs": 1,
+    "image": "https://i.ibb.co.com/3yQb008C/developer.png",
+    "id": 3
+  },
+  {
+    "name": "Database Administration",
+    "jobs": 1,
+    "image": "https://i.ibb.co.com/W4mWD5bW/data-admin.png",
+    "id": 4
+  },
+  {
+    "name": "Business Management",
+    "jobs": 2,
+    "image": "https://i.ibb.co.com/qLHtKyNd/business-management-1.png",
+    "id": 5
+  },
+  {
+    "name": "Admin",
+    "jobs": 2,
+    "image": "https://i.ibb.co.com/ZpPvBLcD/admin.png",
+    "id": 6
+  },
+  {
+    "name": "Information Technology",
+    "jobs": 1,
+    "image": "https://i.ibb.co.com/mCRsnbt0/it.png",
+    "id": 7
+  }
+]
