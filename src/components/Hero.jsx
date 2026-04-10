@@ -17,7 +17,7 @@ const Hero = () => {
           Explore opportunities that match your skills and passions, and land
           the job you've always wanted with JobsPortal.
         </p>
-        <div className="flex items-center gap-1 md:gap-2 bg-[#ffff] h-12 md:h-15 lg:h-17 w-full lg:w-[80%] p-1 lg:p-2.5 rounded-lg">
+        <div className="flex items-center gap-1 md:gap-2 bg-[#ffff] h-12 md:h-15 lg:h-17 w-full lg:w-[80%] p-1 lg:p-2.5 rounded-2xl">
           <div className="bg-gray-50 flex items-center gap-2 lg:gap-3 h-full w-[70%] rounded-md px-4">
             <IoMdSearch className="text-[22px] lg:text-[25px] text-gray-500" />
             <input
@@ -31,7 +31,7 @@ const Hero = () => {
           </div>
         </div>
         <div className="pt-3 md:pt-4 lg:pt-5 flex items-center gap-5 md:gap-6 lg:gap-10">
-          <div className="px-5 md:px-6 lg:px-7 py-2 bg-[#ecfeff] rounded-lg border border-[#0ea4e941]">
+          <div className="px-5 md:px-6 lg:px-7 py-2 bg-[#ecfeff] rounded-2xl border border-[#0ea4e941]">
             <h1 className="font-medium md:font-semibold lg:font-bold text-[20px] text-[#0ea5e9] leading-5">
               50K+
             </h1>

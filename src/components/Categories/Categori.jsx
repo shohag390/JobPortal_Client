@@ -3,7 +3,7 @@ import { FaBriefcase } from "react-icons/fa";
 
 const Categori = ({ categore }) => {
   return (
-    <div className="p-6 companie-card border bg-[#ffff] border-[#cccccc5d] flex flex-col justify-center items-center rounded-lg hover:-translate-y-1 duration-500">
+    <div className="p-6 companie-card border bg-[#ffff] border-[#cccccc5d] flex flex-col justify-center items-center rounded-2xl hover:-translate-y-1 duration-500">
       <div className="bg-[#2563eb14] h-18 md:h-20 lg:h-22 w-18 md:w-20 lg:w-22 flex items-center justify-center rounded-md">
         <img
           className="h-14 md:h-16 lg:h-18 w-14 md:w-16 lg:w-18"
