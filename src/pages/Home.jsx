@@ -1,6 +1,5 @@
 import React from "react";
 import Hero from "../components/Hero";
-import OptionBtn from "../components/OptionBtn";
 import TopCompanies from "../components/TopCompanies/TopCompanies";
 import Categories from "../components/Categories/Categories";
 import Industries from "../components/Industries/Industries";
@@ -18,7 +17,6 @@ const Home = () => {
   return (
     <>
       <Hero />
-      <OptionBtn />
       <TopCompanies />
       <Categories />
       <Industries />

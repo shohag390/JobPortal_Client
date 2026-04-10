@@ -33,7 +33,7 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="px-5 md:px-12 lg:px-20 2xl:px-60 h-[7vh] md:h-[8vh] lg:h-[9vh] 2xl:h-[10vh] bg-[#ffffff] flex items-center justify-between sticky top-0 left-0 z-50">
+    <nav className="px-5 md:px-12 lg:px-20 2xl:px-60 h-[7vh] md:h-[8vh] lg:h-[9vh] 2xl:h-[10vh] bg-[#ffffff] flex items-center justify-between sticky top-0 left-0 z-50 shadow">
       {/* Logo */}
       <Link to={"/"}>
         <img className="h-7.5 md:h-9 lg:h-10" src={logo} alt="" />

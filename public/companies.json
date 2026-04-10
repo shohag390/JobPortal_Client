@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Multimedia Design",
+    "location": "United States of America",
+    "openJobs": 5,
+    "logo": "https://i.ibb.co.com/ksMqYd8z/emplogo9.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Power Wave",
+    "location": "United States of America",
+    "openJobs": 2,
+    "logo": "https://i.ibb.co.com/nsbL6knw/emplogo10.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Travel Advisor",
+    "location": "United States of America",
+    "openJobs": 0,
+    "logo": "https://i.ibb.co.com/kjGX3Gv/emplogo11.jpg"
+  },
+  {
+    "id": 4,
+    "name": "New Design Studio",
+    "location": "United States of America",
+    "openJobs": 1,
+    "logo": "https://i.ibb.co.com/B24KVTjh/emplogo12.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Net Design",
+    "location": "United States of America",
+    "openJobs": 1,
+    "logo": "https://i.ibb.co.com/Q3fRGpYf/emplogo13.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Power Color",
+    "location": "United States of America",
+    "openJobs": 2,
+    "logo": "https://i.ibb.co.com/Kxq4rJQX/emplogo14.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Connect People",
+    "location": "United States of America",
+    "openJobs": 2,
+    "logo": "https://i.ibb.co.com/fzkZC1ZM/emplogo15.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Surf Wave",
+    "location": "United States of America",
+    "openJobs": 1,
+    "logo": "https://i.ibb.co.com/TDbhd8L7/emplogo16.jpg"
+  }
+]
