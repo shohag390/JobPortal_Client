@@ -3,11 +3,9 @@ import { FaBriefcase } from "react-icons/fa";
 import { TiLocation } from "react-icons/ti";
 
 const Company = ({ companie }) => {
-  console.log(companie);
-
   return (
-    <div className="p-6 companie-card border border-[#cccccc5d] flex flex-col justify-center items-center rounded-lg group">
-      <div className="h-16 lg:h-18 2xl:h-20 w-16 lg:w-18 2xl:w-20 bg-[#cccccc21] border border-[#cccccc5d] flex items-center justify-center rounded-md card-image group-hover:-translate-y-1 duration-500">
+    <div className="p-6 companie-card border border-[#cccccc5d] flex flex-col justify-center items-center rounded-lg hover:-translate-y-1 duration-500">
+      <div className="h-16 lg:h-18 2xl:h-20 w-16 lg:w-18 2xl:w-20 bg-[#cccccc21] border border-[#cccccc5d] flex items-center justify-center rounded-md card-image">
         <img
           className="h-14 lg:h-15 2xl:h-16 w-14 lg:w-15 2xl:w-16 rounded-sm"
           src={companie?.logo}
@@ -18,7 +16,7 @@ const Company = ({ companie }) => {
         {companie?.name}
       </h4>
       <p className="flex items-center gap-1 lg:gap-2 pb-2 lg:pb-3">
-        <TiLocation className="text-[#22c55e] text-[18px] lg:text-[20px]" />
+        <TiLocation className="text-[#1d4ed8] text-[18px] lg:text-[20px]" />
         <span className="text-[#64748b] text-[14px] lg:text-[16px]">
           {companie?.location}
         </span>
