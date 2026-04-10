@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Samantha Lee",
+    "role": "Product Designer",
+    "company": "Bright Labs",
+    "image": "https://i.ibb.co.com/pjc5Rjv4/user6.jpg",
+    "review": "JobsPortal helped me land my dream role within weeks. The process was clean, seamless, and the support team was always ready to assist."
+  },
+  {
+    "id": 2,
+    "name": "Michael Robinson",
+    "role": "HR Manager",
+    "company": "SphereTech",
+    "image": "https://i.ibb.co.com/HD46BSKk/user5.jpg",
+    "review": "As an employer, we found top talent faster than ever before. The platform makes publishing jobs and managing applicants incredibly simple."
+  },
+  {
+    "id": 3,
+    "name": "Priya Patel",
+    "role": "Software Engineer",
+    "company": "Connect People",
+    "image": "https://i.ibb.co.com/PZT6h5cR/user4.jpg",
+    "review": "I appreciate the curated job recommendations and the ability to connect directly with companies that align with my values."
+  },
+  {
+    "id": 4,
+    "name": "David Kim",
+    "role": "Frontend Developer",
+    "company": "CodeCraft",
+    "image": "https://i.ibb.co.com/bgWssMSV/user3.jpg",
+    "review": "The platform made job searching stress-free. I found multiple opportunities and landed a role that perfectly fits my skills."
+  },
+  {
+    "id": 5,
+    "name": "Emily Johnson",
+    "role": "Marketing Specialist",
+    "company": "GrowthHub",
+    "image": "https://i.ibb.co.com/Jw5qDrk5/user2.jpg",
+    "review": "The application process was smooth and transparent. I loved how easy it was to track my applications and get updates."
+  },
+  {
+    "id": 6,
+    "name": "Ahmed Rahman",
+    "role": "Backend Developer",
+    "company": "TechNova",
+    "image": "https://i.ibb.co.com/yBhmt5Cj/user.jpg",
+    "review": "Great platform for both job seekers and recruiters. It helped me connect with companies that truly match my career goals."
+  }
+]

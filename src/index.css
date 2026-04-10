@@ -19,15 +19,14 @@ html {
 }
 
 .categories {
-  background: linear-gradient(
-    90deg,
-    rgba(248, 250, 252, 0.8) 0%,
-    rgba(236, 253, 245, 0.8) 100%
-  );
+  background: linear-gradient(90deg, #f8fafccc 0%, #ecfdf5cc 100%);
 }
 .works {
   background: linear-gradient(90deg, #f8fafce6 0%, #ecfdf5e6 100%);
 }
 .about-us {
   background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+}
+.success-stories {
+  background: linear-gradient(120deg, #edf2ffa6 0%, #dbf5ffa6 100%);
 }
