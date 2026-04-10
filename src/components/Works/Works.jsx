@@ -29,7 +29,7 @@ const Works = () => {
     <div className="px-5 md:px-12 lg:px-20 2xl:px-60 py-8 md:py-10 lg:py-12 2xl:py-18 works">
       <SectionHeader subTitle={"Simple Steps"} title={"How It Works"} />
 
-      <div className="grid md:grid-cols-3 gap-3 md:gap-4 lg:gap-5  2xl:gap-6">
+      <div className="grid md:grid-cols-3 gap-3 md:gap-4 lg:gap-5 2xl:gap-6">
         {steps?.map((step, index) => (
           <Work key={index} step={step} />
         ))}

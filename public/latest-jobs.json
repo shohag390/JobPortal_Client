@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "title": "Technical Database Engineer",
+    "type": "Full Time",
+    "company": "Database Management Company",
+    "logo": "https://i.ibb.co.com/TDbhd8L7/emplogo16.jpg",
+    "location": "New York",
+    "posted_date": "Mar 07, 2025"
+  },
+  {
+    "id": 2,
+    "title": "Front-end Developer",
+    "type": "Freelance",
+    "company": "Creative Studio",
+    "logo": "https://i.ibb.co.com/fzkZC1ZM/emplogo15.jpg",
+    "location": "Boston",
+    "posted_date": "Mar 05, 2025"
+  },
+  {
+    "id": 3,
+    "title": "Product Designer",
+    "type": "Part Time",
+    "company": "Bright Agency",
+    "logo": "https://i.ibb.co.com/Kxq4rJQX/emplogo14.jpg",
+    "location": "Chicago",
+    "posted_date": "Mar 04, 2025"
+  },
+  {
+    "id": 4,
+    "title": "Mobile Developer",
+    "type": "Freelance",
+    "company": "Appify Labs",
+    "logo": "https://i.ibb.co.com/Q3fRGpYf/emplogo13.jpg",
+    "location": "Remote",
+    "posted_date": "Mar 02, 2025"
+  },
+  {
+    "id": 5,
+    "title": "Senior UX Researcher",
+    "type": "Full Time",
+    "company": "Insights Co.",
+    "logo": "https://i.ibb.co.com/B24KVTjh/emplogo12.jpg",
+    "location": "San Francisco",
+    "posted_date": "Feb 28, 2025"
+  },
+  {
+    "id": 6,
+    "title": "Systems Administrator",
+    "type": "Full Time",
+    "company": "Sphere Networks",
+    "logo": "https://i.ibb.co.com/kjGX3Gv/emplogo11.jpg",
+    "location": "Austin",
+    "posted_date": "Feb 26, 2025"
+  },
+  {
+    "id": 7,
+    "title": "Social Media Strategist",
+    "type": "Part Time",
+    "company": "Connect Agency",
+    "logo": "https://i.ibb.co.com/nsbL6knw/emplogo10.jpg",
+    "location": "Denver",
+    "posted_date": "Feb 25, 2025"
+  },
+  {
+    "id": 8,
+    "title": "Support Engineer",
+    "type": "Remote",
+    "company": "Helpline Inc.",
+    "logo": "https://i.ibb.co.com/ksMqYd8z/emplogo9.jpg",
+    "location": "Remote",
+    "posted_date": "Feb 23, 2025"
+  },
+  {
+    "id": 9,
+    "title": "Backend Engineer",
+    "type": "Full Time",
+    "company": "Rapid Systems",
+    "logo": "https://i.ibb.co.com/SX9FNFYc/emplogo6.jpg",
+    "location": "Phoenix",
+    "posted_date": "Feb 22, 2025"
+  }
+]

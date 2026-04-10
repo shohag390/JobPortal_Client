@@ -5,15 +5,15 @@ import { Link } from "react-router";
 
 const Hero = () => {
   return (
-    <div className="hero px-5 md:px-12 lg:px-20 2xl:px-60 py-10 md:py-20 lg:py-0 h-full lg:h-[91vh] 2xl:h-[90vh] flex lg:flex-row flex-col gap-10 md:gap-15 lg:gap-0 items-center justify-between">
+    <div className="hero px-5 md:px-12 lg:px-20 2xl:px-60 py-10 md:py-20 lg:py-0 h-full lg:h-[91vh] 2xl:h-[90vh] flex lg:flex-row flex-col gap-10 md:gap-15 lg:gap-0 items-center justify-between group">
       <div className="w-full lg:w-1/2">
         <span className="bg-[#1d4ed81f] text-[#047857] uppercase px-5 py-1 rounded-full text-[14px] md:text-[16px]">
           Ready to Find Your Dream Job?
         </span>
-        <h1 className="font-semibold md:font-bold text-[32px] md:text-[45px] lg:text-[50px] leading-10 md:leading-12 lg:leading-14 pt-3 md:pt-4 lg:pt-5 ">
+        <h1 className="font-semibold md:font-bold text-[32px] md:text-[45px] lg:text-[50px] leading-10 md:leading-12 lg:leading-14 pt-3 md:pt-4 lg:pt-5">
           Take the next step in your career journey.
         </h1>
-        <p className="py-3 md:py-4 lg:py-5 w-full md:w-[70%] lg:w-[80%] text-[14px] md:text-[16px]">
+        <p className="py-3 md:py-4 lg:py-5 w-full md:w-[70%] lg:w-[80%] text-[14px] md:text-[16px] text-[#64748b]">
           Explore opportunities that match your skills and passions, and land
           the job you've always wanted with JobsPortal.
         </p>
@@ -53,7 +53,7 @@ const Hero = () => {
           </Link>
         </div>
       </div>
-      <div className="w-full lg:w-1/2">
+      <div className="w-full lg:w-1/2 group-hover:-translate-y-2 duration-500">
         <img src={HeroImage} alt="" />
       </div>
     </div>
