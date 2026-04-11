@@ -26,7 +26,7 @@ const Hero = () => {
               className="w-full h-full focus:outline-0"
             />
           </div>
-          <div className="bg-[#1d4ed8] hover:bg-[#05af44] duration-500 text-[#ffff] h-full flex items-center justify-center w-[30%] rounded-md text-[14px] md:text-[16px]">
+          <div className="bg-[#1d4ed8] hover:bg-[#003ad8] duration-500 text-[#ffff] h-full flex items-center justify-center w-[30%] rounded-md text-[14px] md:text-[16px]">
             <button>Search</button>
           </div>
         </div>

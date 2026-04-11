@@ -30,3 +30,11 @@ html {
 .success-stories {
   background: linear-gradient(120deg, #edf2ffa6 0%, #dbf5ffa6 100%);
 }
+
+.newsletter {
+  background: linear-gradient(
+    135deg,
+    rgba(225, 239, 254, 0.85) 0%,
+    rgba(220, 252, 231, 0.85) 100%
+  );
+}

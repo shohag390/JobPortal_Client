@@ -1,0 +1,44 @@
+[
+  {
+    "category": "Hiring",
+    "date": "17 Sep",
+    "read_time": "7 min read",
+    "title": "How to design a candidate experience that actually converts",
+    "description": "From first touch to offer, here’s the messaging stack and automation playbook we use to keep talent engaged.",
+    "author": {
+      "user": "https://i.ibb.co.com/HD46BSKk/user5.jpg",
+      "name": "Samira Hodge",
+      "role": "Employer Brand Lead"
+    },
+    "image": "https://i.ibb.co.com/7ddz9LCt/1.jpg",
+    "cta": "Read article"
+  },
+  {
+    "category": "Leadership",
+    "date": "15 Sep",
+    "read_time": "5 min read",
+    "title": "7 rituals our leadership team uses to stay aligned remotely",
+    "description": "Weekly dashboards, async standups, and lightweight rituals that keep strategic bets on track.",
+    "author": {
+      "user": "https://i.ibb.co.com/pjc5Rjv4/user6.jpg",
+      "name": "Devon Marks",
+      "role": "Chief of Staff"
+    },
+    "image": "https://i.ibb.co.com/VXnCf6b/2.jpg",
+    "cta": "Read article"
+  },
+  {
+    "category": "Culture",
+    "date": "12 Sep",
+    "read_time": "6 min read",
+    "title": "Inside the onboarding sprint that ramps new hires in 10 days",
+    "description": "A look at how we bundle product education, values training, and buddy systems into a cohesive journey.",
+    "author": {
+      "user": "https://i.ibb.co.com/bgWssMSV/user3.jpg",
+      "name": "Lily Ortega",
+      "role": "People Programs"
+    },
+    "image": "https://i.ibb.co.com/BHZzwCjW/3.jpg",
+    "cta": "Read article"
+  }
+]
