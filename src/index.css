@@ -38,3 +38,8 @@ html {
     rgba(220, 252, 231, 0.85) 100%
   );
 }
+.footer {
+  background:
+    radial-gradient(circle at 10% 20%, #3b82f61f 0%, #3b82f600 45%),
+    linear-gradient(135deg, #f0f9ff 0%, #f0fff4 45%, #ffffff 100%);
+}
