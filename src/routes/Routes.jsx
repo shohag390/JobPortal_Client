@@ -9,11 +9,13 @@ import SignIn from "../pages/Auth/SignIn";
 import SignUp from "../pages/Auth/SignUp";
 import Dashboard from "../layouts/Dashboard";
 import DashboardHome from "../components/Dashboard/DashboardHome";
+import ErrorPage from "../components/ErrorPage";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     Component: RootLayout,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
@@ -48,6 +50,7 @@ export const router = createBrowserRouter([
   {
     path: "/dashboard",
     Component: Dashboard,
+    errorElement: <ErrorPage />,
     children: [
       {
         index: true,
