@@ -8,9 +8,8 @@ const AboutPage = () => {
   return (
     <>
       <AboutExpertise />
-      <AboutPlatform />
-      <AboutUs />
       <AboutProcess />
+      <AboutPlatform />
     </>
   );
 };
