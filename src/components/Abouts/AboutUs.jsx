@@ -47,7 +47,7 @@ const AboutUs = () => {
           </ul>
         </div>
 
-        <div className="w-full lg:w-1/2 relative group overflow-hidden rounded-lg">
+        <div className="w-full lg:w-1/2 relative group overflow-hidden rounded-2xl">
           <img
             src={videoThumbnail}
             alt="video"
