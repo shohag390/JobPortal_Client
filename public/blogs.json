@@ -40,5 +40,47 @@
     },
     "image": "https://i.ibb.co.com/BHZzwCjW/3.jpg",
     "cta": "Read article"
+  },
+  {
+    "category": "Productivity",
+    "date": "10 Sep",
+    "read_time": "4 min read",
+    "title": "Simple productivity hacks that save 10+ hours every week",
+    "description": "Discover time-blocking, automation tools, and workflows that help teams focus on what truly matters.",
+    "author": {
+      "user": "https://i.ibb.co.com/VXnCf6b/2.jpg",
+      "name": "Ethan Cole",
+      "role": "Operations Manager"
+    },
+    "image": "https://i.ibb.co.com/0VYBYRY1/4.jpg",
+    "cta": "Read article"
+  },
+  {
+    "category": "Technology",
+    "date": "08 Sep",
+    "read_time": "8 min read",
+    "title": "AI tools every modern team should be using in 2025",
+    "description": "From automation to decision-making, here are the AI tools transforming how teams work and collaborate.",
+    "author": {
+      "user": "https://i.ibb.co.com/gb1jvqR5/download.jpg",
+      "name": "Nina Patel",
+      "role": "Tech Strategist"
+    },
+    "image": "https://i.ibb.co.com/W4kR2f0d/blog.avif",
+    "cta": "Read article"
+  },
+  {
+    "category": "Career",
+    "date": "05 Sep",
+    "read_time": "6 min read",
+    "title": "How to build a career roadmap that actually works",
+    "description": "Learn how to set realistic goals, track progress, and pivot your career path with confidence.",
+    "author": {
+      "user": "https://i.ibb.co.com/TMVBkQTk/Whats-App-Image-2025-08-27-at-12-46-08-PM.jpg",
+      "name": "Marcus Lee",
+      "role": "Career Coach"
+    },
+    "image": "https://i.ibb.co.com/Z1BtHYjD/blog2.avif",
+    "cta": "Read article"
   }
 ]

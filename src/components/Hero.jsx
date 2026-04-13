@@ -5,7 +5,7 @@ import { Link } from "react-router";
 
 const Hero = () => {
   return (
-    <div className="hero px-5 md:px-12 lg:px-20 2xl:px-60 py-10 md:py-20 lg:py-0 h-full lg:h-[91vh] 2xl:h-[90vh] flex lg:flex-row flex-col gap-10 md:gap-15 lg:gap-0 items-center justify-between group">
+    <div className="hero px-5 md:px-12 lg:px-20 2xl:px-60 py-10 md:py-20 lg:py-0 h-full lg:h-[91vh] 2xl:h-[90vh] flex lg:flex-row flex-col gap-10 md:gap-15 lg:gap-20 items-center justify-between group">
       <div className="w-full lg:w-1/2">
         <span className="bg-[#1d4ed81f] text-[#047857] uppercase px-5 py-1 rounded-full text-[14px] md:text-[16px]">
           Ready to Find Your Dream Job?
