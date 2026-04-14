@@ -43,7 +43,16 @@ const Navbar = () => {
       <ul className="lg:flex lg:items-center lg:gap-6 hidden">
         {navLink?.map((link, index) => (
           <li key={index}>
-            <NavLink to={link?.path}>{link?.display}</NavLink>
+            <NavLink
+              className={(navClass) =>
+                navClass?.isActive
+                  ? "text-[#003ad8] border-b-2 duration-500 border-[#003ad8] pb-1"
+                  : "hover:text-[#003ad8] border-b-2 border-transparent duration-500 pb-0"
+              }
+              to={link?.path}
+            >
+              {link?.display}
+            </NavLink>
           </li>
         ))}
       </ul>
@@ -54,7 +63,15 @@ const Navbar = () => {
       >
         {navLink?.map((link, index) => (
           <li key={index}>
-            <NavLink onClick={() => setOpen(!open)} to={link?.path}>
+            <NavLink
+              className={(navClass) =>
+                navClass?.isActive
+                  ? "text-[#003ad8] duration-500 border-[#003ad8]"
+                  : "hover:text-[#003ad8] duration-500"
+              }
+              onClick={() => setOpen(!open)}
+              to={link?.path}
+            >
               {link?.display}
             </NavLink>
           </li>
