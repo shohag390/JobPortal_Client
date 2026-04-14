@@ -76,8 +76,80 @@
     "title": "Backend Engineer",
     "type": "Full Time",
     "company": "Rapid Systems",
-    "logo": "https://i.ibb.co.com/SX9FNFYc/emplogo6.jpg",
+    "logo": "https://i.ibb.co.com/SX9FNFYc/emplogo8.jpg",
     "location": "Phoenix",
     "posted_date": "Feb 22, 2025"
+  },
+  {
+    "id": 10,
+    "title": "Full Stack Developer",
+    "type": "Full Time",
+    "company": "NextGen Tech",
+    "logo": "https://i.ibb.co.com/SX9FNFYc/emplogo1.jpg",
+    "location": "Seattle",
+    "posted_date": "Feb 20, 2025"
+  },
+  {
+    "id": 11,
+    "title": "UI/UX Designer",
+    "type": "Part Time",
+    "company": "Design Studio Pro",
+    "logo": "https://i.ibb.co.com/SX9FNFYc/emplogo3.jpg",
+    "location": "Los Angeles",
+    "posted_date": "Feb 18, 2025"
+  },
+  {
+    "id": 12,
+    "title": "DevOps Engineer",
+    "type": "Full Time",
+    "company": "CloudOps Ltd.",
+    "logo": "https://i.ibb.co.com/TDbhd8L7/emplogo4.jpg",
+    "location": "Dallas",
+    "posted_date": "Feb 17, 2025"
+  },
+  {
+    "id": 13,
+    "title": "QA Engineer",
+    "type": "Contract",
+    "company": "QualitySoft",
+    "logo": "https://i.ibb.co.com/SX9FNFYc/emplogo5.jpg",
+    "location": "Atlanta",
+    "posted_date": "Feb 15, 2025"
+  },
+  {
+    "id": 14,
+    "title": "Data Analyst",
+    "type": "Full Time",
+    "company": "Data Insights Inc.",
+    "logo": "https://i.ibb.co.com/SX9FNFYc/emplogo2.jpg",
+    "location": "San Diego",
+    "posted_date": "Feb 14, 2025"
+  },
+  {
+    "id": 15,
+    "title": "Cybersecurity Specialist",
+    "type": "Full Time",
+    "company": "SecureNet",
+    "logo": "https://i.ibb.co.com/SX9FNFYc/emplogo9.jpg",
+    "location": "Washington DC",
+    "posted_date": "Feb 12, 2025"
+  },
+  {
+    "id": 16,
+    "title": "AI Engineer",
+    "type": "Remote",
+    "company": "AI Labs",
+    "logo": "https://i.ibb.co.com/SX9FNFYc/emplogo6.jpg",
+    "location": "Remote",
+    "posted_date": "Feb 10, 2025"
+  },
+  {
+    "id": 17,
+    "title": "Technical Support Specialist",
+    "type": "Part Time",
+    "company": "HelpDesk Solutions",
+    "logo": "https://i.ibb.co.com/SX9FNFYc/emplogo16.jpg",
+    "location": "Miami",
+    "posted_date": "Feb 08, 2025"
   }
 ]

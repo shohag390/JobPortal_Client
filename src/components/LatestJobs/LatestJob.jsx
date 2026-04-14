@@ -53,7 +53,7 @@ const LatestJob = ({ latestJob }) => {
             className="border border-[#1d4ed8] text-[#1d4ed8] hover:text-[#ffff] hover:bg-[#1d4ed8] duration-500 py-1 md:py-1.5 lg:py-2 px-4 md:px-5 lg:px-6 rounded-full text-[14px] md:text-[16px]"
             to={""}
           >
-            Apply Now
+            Job Detail
           </Link>
         </div>
       </div>
