@@ -32,15 +32,15 @@ html {
 }
 
 .newsletter {
-  background: linear-gradient(
-    135deg,
-    rgba(225, 239, 254, 0.85) 0%,
-    rgba(220, 252, 231, 0.85) 100%
-  );
+  background: linear-gradient(135deg, #e1effed9 0%, #dcfce7d9 100%);
 }
 
 .blog-hero {
   background: linear-gradient(120deg, #eef2ff 0%, #f5f3ff 30%, #e0f2fe 100%);
+}
+
+.contact-banner {
+  background: linear-gradient(135deg, #3b82f629 0%, #10b98124 100%);
 }
 
 .footer {

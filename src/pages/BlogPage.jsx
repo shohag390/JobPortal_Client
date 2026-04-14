@@ -19,10 +19,10 @@ const BlogPage = () => {
           <span className="bg-[#1d4ed81f] text-[#047857] uppercase px-5 py-1 rounded-full text-[14px] md:text-[16px]">
             Playbooks
           </span>
-          <h1 className="font-semibold text-[30px] md:text-[42px] lg:text-[45px] leading-10 md:leading-12 lg:leading-14 pt-3 md:pt-4 lg:pt-5">
+          <h1 className="font-semibold text-[30px] md:text-[42px] lg:text-[45px] leading-10 md:leading-12 lg:leading-14 pt-3 lg:pt-3">
             Full-width stories built for strategy deep dives.
           </h1>
-          <p className="py-3 md:py-4 lg:py-5 w-full md:w-[70%] lg:w-[80%] text-[14px] md:text-[16px] text-[#64748b]">
+          <p className="pt-3 md:pt-4 lg:pt-5 w-full md:w-[70%] lg:w-[80%] text-[14px] md:text-[16px] text-[#64748b]">
             Quarterly research, interviews, and frameworks from operators
             scaling people-first companies.
           </p>
