@@ -48,7 +48,10 @@ const SuccessStories = () => {
         >
           {successStories?.map((user) => (
             <SwiperSlide key={user?.id}>
-              <div className="bg-[#ffff] p-6 rounded-2xl cursor-pointer">
+              <div
+                data-aos="flip-left"
+                className="bg-[#ffff] p-6 rounded-2xl cursor-pointer"
+              >
                 <div className="pb-3 md:pb-4 lg:pb-5">
                   <FaQuoteLeft className="text-[25px] md:text-[30px] lg:text-[35px] text-[#1d4ed8]" />
                 </div>

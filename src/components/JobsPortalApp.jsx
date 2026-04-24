@@ -8,7 +8,10 @@ const JobsPortalApp = () => {
       <div className="w-full lg:w-1/2">
         <img src={image1} alt="" />
       </div>
-      <div className="w-full lg:w-1/2 flex flex-col justify-center">
+      <div
+        data-aos="fade-up"
+        className="w-full lg:w-1/2 flex flex-col justify-center"
+      >
         <h4 className="text-[#1d4ed8] text-[16px] md:text-[18px] lg:text-[20px] md:font-medium">
           Step Forword Now
         </h4>

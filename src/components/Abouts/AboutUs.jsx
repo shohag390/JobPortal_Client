@@ -10,7 +10,7 @@ const AboutUs = () => {
   return (
     <div className="relative about-us">
       <div className="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-6 md:gap-8 lg:gap-20 px-5 md:px-12 lg:px-20 2xl:px-60 py-8 md:py-10 lg:py-12 2xl:py-18">
-        <div className="w-full lg:w-1/2">
+        <div data-aos="fade-up" className="w-full lg:w-1/2">
           <span className="bg-[#1d4ed81f] text-[#047857] uppercase px-5 py-1 rounded-full text-[14px] md:text-[16px]">
             Here You Can See
           </span>
@@ -47,7 +47,10 @@ const AboutUs = () => {
           </ul>
         </div>
 
-        <div className="w-full lg:w-1/2 relative group overflow-hidden rounded-2xl">
+        <div
+          data-aos="fade-up"
+          className="w-full lg:w-1/2 relative group overflow-hidden rounded-2xl"
+        >
           <img
             src={videoThumbnail}
             alt="video"

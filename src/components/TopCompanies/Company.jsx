@@ -4,7 +4,13 @@ import { TiLocation } from "react-icons/ti";
 
 const Company = ({ companie }) => {
   return (
-    <div className="p-6 companie-card border border-[#cccccc5d] flex flex-col justify-center items-center rounded-2xl hover:-translate-y-1 duration-500">
+    <div
+      style={{
+        transition: ".5s",
+      }}
+      data-aos="fade-up"
+      className="p-6 companie-card border border-[#cccccc5d] flex flex-col justify-center items-center rounded-2xl hover:-translate-y-1"
+    >
       <div className="h-16 lg:h-18 2xl:h-20 w-16 lg:w-18 2xl:w-20 bg-[#cccccc21] border border-[#cccccc5d] flex items-center justify-center rounded-md card-image">
         <img
           className="h-14 lg:h-15 2xl:h-16 w-14 lg:w-15 2xl:w-16 rounded-sm"

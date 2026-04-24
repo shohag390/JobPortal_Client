@@ -3,7 +3,10 @@ import { FaBriefcase } from "react-icons/fa";
 
 const City = ({ city }) => {
   return (
-    <div className="relative h-60 md:h-70 lg:h-80 w-full overflow-hidden rounded-2xl group">
+    <div
+      data-aos="flip-right"
+      className="relative h-60 md:h-70 lg:h-80 w-full overflow-hidden rounded-2xl group"
+    >
       <img
         className="absolute h-full w-full group-hover:scale-105 duration-500"
         src={city?.image}

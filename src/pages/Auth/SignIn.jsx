@@ -30,7 +30,10 @@ const SignIn = () => {
 
   return (
     <div className="about-us px-5 md:px-12 lg:px-20 2xl:px-60 py-10 md:py-20 lg:py-0 h-full lg:h-[91vh] 2xl:h-[90vh] flex items-center justify-center">
-      <div className="w-full md:w-[60%] lg:w-[40%] 2xl:w-[45%] bg-[#ffff] p-6 border border-[#cccccc5d] rounded-2xl companie-card">
+      <div
+        data-aos="fade-up"
+        className="w-full md:w-[60%] lg:w-[40%] 2xl:w-[45%] bg-[#ffff] p-6 border border-[#cccccc5d] rounded-2xl companie-card"
+      >
         <div className="text-center pb-6 md:pb-7 lg:pb-8">
           <h2 className=" text-[22px] md:text-[24px] lg:text-[26px] 2xl:text-[28px] font-medium lg:font-semibold 2xl:font-bold">
             Welcome back

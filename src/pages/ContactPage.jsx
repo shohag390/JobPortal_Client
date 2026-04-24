@@ -33,13 +33,22 @@ const ContactPage = () => {
   return (
     <div>
       <div className="contact-banner px-5 md:px-12 lg:px-20 2xl:px-60 py-8 md:py-10 lg:py-12 2xl:py-18 flex flex-col items-center justify-center">
-        <span className="bg-[#1d4ed81f] text-[#047857] uppercase px-5 py-1 rounded-full text-[14px] md:text-[16px]">
+        <span
+          data-aos="zoom-in-down"
+          className="bg-[#1d4ed81f] text-[#047857] uppercase px-5 py-1 rounded-full text-[14px] md:text-[16px]"
+        >
           We're here to help
         </span>
-        <h1 className="font-semibold text-[30px] md:text-[42px] lg:text-[45px] leading-10 md:leading-12 lg:leading-14 pt-3 lg:pt-3 text-center">
+        <h1
+          data-aos="zoom-in-down"
+          className="font-semibold text-[30px] md:text-[42px] lg:text-[45px] leading-10 md:leading-12 lg:leading-14 pt-3 lg:pt-3 text-center"
+        >
           Let's build your next hiring success story.
         </h1>
-        <p className="pt-2 lg:pt-3 w-full md:w-[70%] lg:w-[80%] text-[14px] md:text-[16px] text-[#64748b] text-center">
+        <p
+          data-aos="zoom-in-down"
+          className="pt-2 lg:pt-3 w-full md:w-[70%] lg:w-[80%] text-[14px] md:text-[16px] text-[#64748b] text-center"
+        >
           Whether you're looking to post a role, explore partnerships, or just
           have a question—our team is ready to connect.
         </p>

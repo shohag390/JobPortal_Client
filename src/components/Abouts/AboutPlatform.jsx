@@ -3,10 +3,13 @@ import image from "../../assets/images/about-us-img1.jpg";
 const AboutPlatform = () => {
   return (
     <div className="px-5 md:px-12 lg:px-20 2xl:px-60 py-8 md:py-10 lg:py-12 2xl:py-18 about-us flex lg:flex-row flex-col-reverse gap-10 md:gap-15 lg:gap-20 items-center justify-between">
-      <div className="w-full lg:w-1/2 lg:flex lg:justify-end">
+      <div
+        data-aos="fade-up"
+        className="w-full lg:w-1/2 lg:flex lg:justify-end"
+      >
         <img className="rounded-2xl w-full" src={image} alt="" />
       </div>
-      <div className="w-full lg:w-1/2">
+      <div data-aos="fade-up" className="w-full lg:w-1/2">
         <h1 className="font-semibold md:font-bold text-[32px] md:text-[45px] lg:text-[50px] leading-10 md:leading-12 lg:leading-14 pt-3 md:pt-4 lg:pt-5">
           Our Perfect Platform
         </h1>

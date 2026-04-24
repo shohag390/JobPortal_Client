@@ -52,18 +52,30 @@ const Jobs = () => {
       {/* Top Text & Search */}
       <div className="px-5 md:px-12 lg:px-20 2xl:px-60 py-8 md:py-10 lg:py-12 2xl:py-18 contact-banner flex flex-col justify-center items-center">
         <div className="w-full lg:w-[70%]">
-          <span className="bg-[#1d4ed81f] text-[#047857] uppercase px-5 py-1 rounded-full text-[14px] md:text-[16px]">
+          <p
+            data-aos="zoom-in-down"
+            className="bg-[#1d4ed81f] inline-block text-[#047857] uppercase px-5 py-1 rounded-full text-[14px] md:text-[16px]"
+          >
             Browse Opportunities
-          </span>
-          <h1 className="font-semibold text-[30px] md:text-[42px] lg:text-[45px] leading-10 md:leading-12 lg:leading-14 pt-3 lg:pt-3">
+          </p>
+          <h1
+            data-aos="zoom-in-down"
+            className="font-semibold text-[30px] md:text-[42px] lg:text-[45px] leading-10 md:leading-12 lg:leading-14 pt-3 lg:pt-3"
+          >
             Find a role that matches your ambition
           </h1>
-          <p className="pt-2 md:pt-3 lg:pt-4 pb-5 md:pb-6 lg:pb-7 2xl:pb-8 w-full md:w-[70%] lg:w-[80%] text-[14px] md:text-[16px] text-[#64748b]">
+          <p
+            data-aos="zoom-in-down"
+            className="pt-2 md:pt-3 lg:pt-4 pb-5 md:pb-6 lg:pb-7 2xl:pb-8 w-full md:w-[70%] lg:w-[80%] text-[14px] md:text-[16px] text-[#64748b]"
+          >
             Search thousands of curated openings across industries, experience
             levels, and locations.
           </p>
 
-          <div className="flex items-center gap-1 md:gap-2 bg-[#ffff] h-12 md:h-15 lg:h-17 w-full lg:w-[80%] p-1 lg:p-2.5 rounded-2xl">
+          <div
+            data-aos="zoom-in-up"
+            className="flex items-center gap-1 md:gap-2 bg-[#ffff] h-12 md:h-15 lg:h-17 w-full lg:w-[80%] p-1 lg:p-2.5 rounded-2xl"
+          >
             <div className="bg-gray-50 flex items-center gap-2 lg:gap-3 h-full w-[70%] rounded-md px-4">
               <IoMdSearch className="text-[22px] lg:text-[25px] text-gray-500" />
               <input
@@ -83,7 +95,10 @@ const Jobs = () => {
       <div className="px-5 md:px-12 lg:px-20 2xl:px-60 py-8 md:py-10 lg:py-12 2xl:py-18 lg:flex lg:items-start lg:gap-8">
         <div className="hidden lg:flex lg:flex-col gap-3 md:gap-4 lg:gap-5 2xl:gap-6 w-[25%]">
           {/* Button Contaner One */}
-          <div className="p-6 companie-card border bg-[#ffff] border-[#cccccc5d] rounded-2xl">
+          <div
+            data-aos="fade-up"
+            className="p-6 companie-card border bg-[#ffff] border-[#cccccc5d] rounded-2xl"
+          >
             <h4 className="font-medium text-[18px] pb-3">Job Type</h4>
             <ul className="flex flex-col gap-2">
               {jobType?.map((item, index) => (
@@ -101,7 +116,10 @@ const Jobs = () => {
           </div>
 
           {/* Button Contaner Two */}
-          <div className="p-6 companie-card border bg-[#ffff] border-[#cccccc5d] rounded-2xl">
+          <div
+            data-aos="fade-up"
+            className="p-6 companie-card border bg-[#ffff] border-[#cccccc5d] rounded-2xl"
+          >
             <h4 className="font-medium text-[18px] pb-3">Location</h4>
             <ul className="flex flex-col gap-2">
               {location?.map((item, index) => (
@@ -118,7 +136,10 @@ const Jobs = () => {
             </ul>
           </div>
           {/* Button Contaner Three */}
-          <div className="p-6 companie-card border bg-[#ffff] border-[#cccccc5d] rounded-2xl">
+          <div
+            data-aos="fade-up"
+            className="p-6 companie-card border bg-[#ffff] border-[#cccccc5d] rounded-2xl"
+          >
             <h4 className="font-medium text-[18px] pb-3">Industry</h4>
             <ul className="flex flex-col gap-2">
               {industry?.map((item, index) => (
@@ -135,7 +156,10 @@ const Jobs = () => {
             </ul>
           </div>
           {/* Button Contaner Four */}
-          <div className="p-6 companie-card border bg-[#ffff] border-[#cccccc5d] rounded-2xl">
+          <div
+            data-aos="fade-up"
+            className="p-6 companie-card border bg-[#ffff] border-[#cccccc5d] rounded-2xl"
+          >
             <h4 className="font-medium text-[18px] pb-3">Salary Range</h4>
             <ul className="flex flex-col gap-2">
               {salaryRange?.map((item, index) => (

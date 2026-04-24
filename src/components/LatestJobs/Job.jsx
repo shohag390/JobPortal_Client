@@ -10,7 +10,11 @@ const Job = ({ job, grid }) => {
       {grid === "grid" ? (
         <Link
           to={""}
-          className="p-6 companie-card border bg-[#ffff] border-[#cccccc5d] rounded-2xl hover:-translate-y-1 duration-500 cursor-pointer"
+          data-aos="fade-up"
+          style={{
+            transition: ".5s",
+          }}
+          className="p-6 companie-card border bg-[#ffff] border-[#cccccc5d] rounded-2xl hover:-translate-y-1  cursor-pointer"
         >
           <div className="border-b border-[#cccccc5d] pb-2 lg:pb-4">
             <p className="flex items-center gap-1 lg:gap-2 text-[14px] md:text-[16px]">

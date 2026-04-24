@@ -4,7 +4,13 @@ import { TiLocation } from "react-icons/ti";
 
 const FeaturedJob = ({ featuredJob }) => {
   return (
-    <div className="p-6 companie-card border border-[#cccccc5d] rounded-2xl hover:-translate-y-1 duration-500 cursor-pointer">
+    <div
+      style={{
+        transition: ".5s",
+      }}
+      data-aos="fade-up"
+      className="p-6 companie-card border border-[#cccccc5d] rounded-2xl hover:-translate-y-1 cursor-pointer"
+    >
       <div className="border-b border-[#cccccc5d] pb-2 lg:pb-4">
         <p className="flex items-center gap-1 lg:gap-2 text-[14px] md:text-[16px]">
           <FaBriefcase />

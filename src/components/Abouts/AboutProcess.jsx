@@ -39,6 +39,7 @@ const AboutProcess = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-5 2xl:gap-6">
         {steps?.map((item) => (
           <div
+            data-aos="flip-left"
             className="p-6 companie-card border border-[#cccccc5d] rounded-2xl hover:-translate-y-1 duration-500 cursor-pointer flex flex-col items-center text-center"
             key={item?.id}
           >

@@ -4,7 +4,13 @@ import { Link } from "react-router";
 
 const Blog = ({ blog }) => {
   return (
-    <div className="companie-card border bg-[#ffff] border-[#cccccc5d] rounded-2xl hover:-translate-y-1 duration-500 cursor-pointer overflow-hidden">
+    <div
+      style={{
+        transition: ".5s",
+      }}
+      data-aos="fade-up"
+      className="companie-card border bg-[#ffff] border-[#cccccc5d] rounded-2xl hover:-translate-y-1  cursor-pointer overflow-hidden"
+    >
       <div className="h-55 md:h-60 lg:h-70 w-full relative">
         <img
           className="h-full w-full absolute"
