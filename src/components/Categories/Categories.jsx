@@ -13,7 +13,6 @@ const Categories = () => {
   }, []);
 
   const sliceCategories = categories.slice(0, 4);
-  console.log(sliceCategories);
 
   return (
     <div className="px-5 md:px-12 lg:px-20 2xl:px-60 py-8 md:py-10 lg:py-12 2xl:py-18 categories">

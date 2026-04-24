@@ -1,8 +1,6 @@
 import React from "react";
 
 const Industri = ({ industre }) => {
-  console.log(industre);
-
   return (
     <div className="flex items-center gap-1 lg:gap-2 bg-[#2563eb14] duration-500 hover:bg-[#1d4ed8] px-4 lg:px-5 py-2 rounded-full group cursor-pointer">
       <div className="h-8 w-8 rounded-full flex items-center justify-center bg-[#ffff] text-[#1d4ed8]">

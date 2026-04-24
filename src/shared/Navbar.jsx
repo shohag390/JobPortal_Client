@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { use, useState } from "react";
 import { Link, NavLink } from "react-router";
 import logo from "../assets/images/jobs-portal-logo.png";
 import userimage from "../assets/images/user.png";
 import { IoIosMenu } from "react-icons/io";
 import { IoClose, IoCloseOutline, IoMenu } from "react-icons/io5";
+import { AuthContext } from "../context/AuthContext/AuthContext";
+import Logout from "./Logout";
 
 const navLink = [
   {
@@ -29,8 +31,8 @@ const navLink = [
 ];
 
 const Navbar = () => {
-  const [user, setUser] = useState(false);
   const [open, setOpen] = useState(false);
+  const { user } = use(AuthContext);
 
   return (
     <nav className="px-5 md:px-12 lg:px-20 2xl:px-60 h-[7vh] md:h-[8vh] lg:h-[9vh] 2xl:h-[10vh] bg-[#ffffff] flex items-center justify-between sticky top-0 left-0 z-50 shadow">
@@ -88,13 +90,14 @@ const Navbar = () => {
             </button>
           </Link>
         ) : (
-          <Link to={"/dashboard"}>
-            <img
-              className="h-10 md:h-12 lg:h-13 w-10 md:w-12 lg:w-13 rounded-full shadow"
-              src={userimage}
-              alt="profile"
-            />
-          </Link>
+          <>
+            <Link to={"/dashboard"}>
+              <button className="bg-[#1d4ed8] hover:bg-[#003ad8] duration-500 py-1.5 md:py-2 lg:py-3 px-6 md:px-8 lg:px-10 rounded-full text-[#ffff] text-[14px] md:text-[16px]">
+                Dashboard
+              </button>
+            </Link>
+            <Logout />
+          </>
         )}
 
         {/* Mobile Manu Bar */}
