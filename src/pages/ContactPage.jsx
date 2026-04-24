@@ -56,8 +56,12 @@ const ContactPage = () => {
       <div className="bg-[#f8fafc] px-5 md:px-12 lg:px-20 2xl:px-60 py-8 md:py-10 lg:py-12 2xl:py-18 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-5 2xl:gap-6">
         {locations.map((loc, index) => (
           <div
+            style={{
+              transition: ".5s",
+            }}
+            data-aos="flip-left"
             key={index}
-            className="p-6 companie-card border bg-[#ffff] border-[#cccccc5d] rounded-2xl hover:-translate-y-1 duration-500 cursor-pointer"
+            className="p-6 companie-card border bg-[#ffff] border-[#cccccc5d] rounded-2xl hover:-translate-y-1  cursor-pointer"
           >
             <h2 className="font-medium lg:font-semibold 2xl:font-bold text-[16px] lg:text-[18px] pb-1 lg:pb-2">
               {loc.city}
@@ -77,7 +81,10 @@ const ContactPage = () => {
         ))}
       </div>
       <div className="bg-[#ffff] px-5 md:px-12 lg:px-20 2xl:px-60 py-8 md:py-10 lg:py-12 2xl:py-18 flex flex-col lg:flex-row items-start gap-8 md:gap-10 lg:gap-15">
-        <div className="p-6 companie-card border bg-[#ffff] border-[#cccccc5d] rounded-2xl w-full lg:w-[45%]">
+        <div
+          data-aos="fade-up"
+          className="p-6 companie-card border bg-[#ffff] border-[#cccccc5d] rounded-2xl w-full lg:w-[45%]"
+        >
           <div>
             <h4 className="text-[18px] md:text-[20px] lg:text-[25px] font-medium lg:font-semibold pb-1 md:pb-2">
               Contact Details
@@ -159,7 +166,10 @@ const ContactPage = () => {
             </div>
           </div>
         </div>
-        <div className="p-6 companie-card border bg-[#ffff] border-[#cccccc5d] rounded-2xl w-full lg:w-[55%]">
+        <div
+          data-aos="fade-up"
+          className="p-6 companie-card border bg-[#ffff] border-[#cccccc5d] rounded-2xl w-full lg:w-[55%]"
+        >
           <h4 className="text-[18px] md:text-[20px] lg:text-[25px] font-medium lg:font-semibold pb-1 md:pb-2">
             Send Us a Message
           </h4>
