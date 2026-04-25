@@ -1,10 +1,7 @@
 import React from "react";
 
 const JobApplicants = () => {
-  return <div>JobApplicants</div>;
+  return <div>Job Applicants</div>;
 };
 
 export default JobApplicants;
-
-
-

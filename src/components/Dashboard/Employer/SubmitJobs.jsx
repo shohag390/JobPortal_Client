@@ -1,7 +1,7 @@
 import React from "react";
 
 const SubmitJobs = () => {
-  return <div>SubmitJobs</div>;
+  return <div>Submit Jobs</div>;
 };
 
 export default SubmitJobs;

@@ -1,7 +1,7 @@
 import React from "react";
 
 const CreateResumes = () => {
-  return <div>CreateResumes</div>;
+  return <div>Create Resumes</div>;
 };
 
 export default CreateResumes;

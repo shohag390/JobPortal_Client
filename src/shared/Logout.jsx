@@ -1,14 +1,17 @@
 import React, { use } from "react";
 import { AuthContext } from "../context/AuthContext/AuthContext";
 import { toast } from "react-toastify";
+import { useNavigate } from "react-router";
 
 const Logout = () => {
   const { signOutUser } = use(AuthContext);
+  const navigate = useNavigate();
 
   const handleSignOut = () => {
     signOutUser()
       .then(() => {
         toast.success("User Sign Out!");
+        navigate("/sign-in");
       })
       .catch((error) => {
         toast.error("Something Error!");

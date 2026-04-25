@@ -1,11 +1,20 @@
 import React, { useState } from "react";
 import { BiLogoBlogger } from "react-icons/bi";
-import { FaBriefcase, FaHome, FaUserFriends } from "react-icons/fa";
-import { PiFlagBannerFill } from "react-icons/pi";
+import {
+  FaBriefcase,
+  FaBriefcaseMedical,
+  FaHome,
+  FaPaperPlane,
+  FaUser,
+  FaUserAlt,
+  FaUserFriends,
+} from "react-icons/fa";
+import { PiFlagBannerFill, PiReadCvLogoFill } from "react-icons/pi";
+import { RiFileEditFill } from "react-icons/ri";
 import { NavLink } from "react-router";
 
 const DashSideNav = () => {
-  const [role, setRole] = useState("candidate");
+  const [role, setRole] = useState("employer");
 
   return (
     <div className="h-screen lg:w-[25%] 2xl:w-[20%] fixed bg-[#ffffff]">
@@ -99,10 +108,10 @@ const DashSideNav = () => {
                 ? "bg-[#2563eb14] py-3 flex items-center lg:gap-4 text-[#1d4ed8] font-medium px-6 lg:px-7 2xl:px-8"
                 : "py-3 flex items-center lg:gap-4 font-medium px-6 lg:px-7 2xl:px-8"
             }
-            to={"all-user"}
+            to={"my-profile"}
           >
-            <FaUserFriends className="lg:text-[18px]" />
-            <span>All User</span>
+            <FaUserAlt className="lg:text-[18px]" />
+            <span>My Profile</span>
           </NavLink>
           <NavLink
             className={(navClass) =>
@@ -110,21 +119,10 @@ const DashSideNav = () => {
                 ? "bg-[#2563eb14] py-3 flex items-center lg:gap-4 text-[#1d4ed8] font-medium px-6 lg:px-7 2xl:px-8"
                 : "py-3 flex items-center lg:gap-4 font-medium px-6 lg:px-7 2xl:px-8"
             }
-            to={"all-blogs"}
-          >
-            <BiLogoBlogger className="lg:text-[18px]" />
-            <span>All Blogs</span>
-          </NavLink>
-          <NavLink
-            className={(navClass) =>
-              navClass?.isActive
-                ? "bg-[#2563eb14] py-3 flex items-center lg:gap-4 text-[#1d4ed8] font-medium px-6 lg:px-7 2xl:px-8"
-                : "py-3 flex items-center lg:gap-4 font-medium px-6 lg:px-7 2xl:px-8"
-            }
-            to={"all-jobs"}
+            to={"my-apply-jobs"}
           >
             <FaBriefcase className="lg:text-[18px]" />
-            <span>All Jobs</span>
+            <span>My Apply Jobs</span>
           </NavLink>
           <NavLink
             className={(navClass) =>
@@ -132,10 +130,10 @@ const DashSideNav = () => {
                 ? "bg-[#2563eb14] py-3 flex items-center lg:gap-4 text-[#1d4ed8] font-medium px-6 lg:px-7 2xl:px-8"
                 : "py-3 flex items-center lg:gap-4 font-medium px-6 lg:px-7 2xl:px-8"
             }
-            to={"add-blogs"}
+            to={"create-resume"}
           >
-            <BiLogoBlogger className="lg:text-[20px]" />
-            <span>Add Blogs</span>
+            <RiFileEditFill className="lg:text-[20px]" />
+            <span>Create Resumes</span>
           </NavLink>
           <NavLink
             className={(navClass) =>
@@ -143,10 +141,10 @@ const DashSideNav = () => {
                 ? "bg-[#2563eb14] py-3 flex items-center lg:gap-4 text-[#1d4ed8] font-medium px-6 lg:px-7 2xl:px-8"
                 : "py-3 flex items-center lg:gap-4 font-medium px-6 lg:px-7 2xl:px-8"
             }
-            to={"add-hero-image"}
+            to={"my-resume"}
           >
-            <PiFlagBannerFill className="lg:text-[20px]" />
-            <span>Add Hero Image</span>
+            <PiReadCvLogoFill className="lg:text-[20px]" />
+            <span>My Resumes</span>
           </NavLink>
         </div>
       )}
@@ -170,10 +168,10 @@ const DashSideNav = () => {
                 ? "bg-[#2563eb14] py-3 flex items-center lg:gap-4 text-[#1d4ed8] font-medium px-6 lg:px-7 2xl:px-8"
                 : "py-3 flex items-center lg:gap-4 font-medium px-6 lg:px-7 2xl:px-8"
             }
-            to={"all-user"}
+            to={"employer-profile"}
           >
-            <FaUserFriends className="lg:text-[18px]" />
-            <span>All User</span>
+            <FaUser className="lg:text-[18px]" />
+            <span>Profile</span>
           </NavLink>
           <NavLink
             className={(navClass) =>
@@ -181,10 +179,10 @@ const DashSideNav = () => {
                 ? "bg-[#2563eb14] py-3 flex items-center lg:gap-4 text-[#1d4ed8] font-medium px-6 lg:px-7 2xl:px-8"
                 : "py-3 flex items-center lg:gap-4 font-medium px-6 lg:px-7 2xl:px-8"
             }
-            to={"all-blogs"}
+            to={"submit-jobs"}
           >
-            <BiLogoBlogger className="lg:text-[18px]" />
-            <span>All Blogs</span>
+            <FaBriefcaseMedical className="lg:text-[18px]" />
+            <span>Submit Jobs</span>
           </NavLink>
           <NavLink
             className={(navClass) =>
@@ -192,10 +190,10 @@ const DashSideNav = () => {
                 ? "bg-[#2563eb14] py-3 flex items-center lg:gap-4 text-[#1d4ed8] font-medium px-6 lg:px-7 2xl:px-8"
                 : "py-3 flex items-center lg:gap-4 font-medium px-6 lg:px-7 2xl:px-8"
             }
-            to={"all-jobs"}
+            to={"my-jobs"}
           >
             <FaBriefcase className="lg:text-[18px]" />
-            <span>All Jobs</span>
+            <span>My Jobs</span>
           </NavLink>
           <NavLink
             className={(navClass) =>
@@ -203,21 +201,10 @@ const DashSideNav = () => {
                 ? "bg-[#2563eb14] py-3 flex items-center lg:gap-4 text-[#1d4ed8] font-medium px-6 lg:px-7 2xl:px-8"
                 : "py-3 flex items-center lg:gap-4 font-medium px-6 lg:px-7 2xl:px-8"
             }
-            to={"add-blogs"}
+            to={"job-applicants"}
           >
-            <BiLogoBlogger className="lg:text-[20px]" />
-            <span>Add Blogs</span>
-          </NavLink>
-          <NavLink
-            className={(navClass) =>
-              navClass?.isActive
-                ? "bg-[#2563eb14] py-3 flex items-center lg:gap-4 text-[#1d4ed8] font-medium px-6 lg:px-7 2xl:px-8"
-                : "py-3 flex items-center lg:gap-4 font-medium px-6 lg:px-7 2xl:px-8"
-            }
-            to={"add-hero-image"}
-          >
-            <PiFlagBannerFill className="lg:text-[20px]" />
-            <span>Add Hero Image</span>
+            <FaPaperPlane className="lg:text-[20px]" />
+            <span>Job Applicants</span>
           </NavLink>
         </div>
       )}

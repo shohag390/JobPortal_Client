@@ -1,7 +1,7 @@
 import React from "react";
 
 const MyJobs = () => {
-  return <div>MyJobs</div>;
+  return <div>My Jobs</div>;
 };
 
 export default MyJobs;

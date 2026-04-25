@@ -15,6 +15,17 @@ import AllBlogs from "../components/Dashboard/Admin/AllBlogs";
 import AllJobs from "../components/Dashboard/Admin/AllJobs";
 import AddBlogs from "../components/Dashboard/Admin/AddBlogs";
 import AddHeroImage from "../components/Dashboard/Admin/AddHeroImage";
+import MyProfile from "../components/Dashboard/Candidate/MyProfile";
+import MyApplyJobs from "../components/Dashboard/Candidate/MyApplyJobs";
+import MyResumes from "../components/Dashboard/Candidate/MyResumes";
+import CreateResumes from "../components/Dashboard/Candidate/CreateResumes";
+import EditResume from "../components/Dashboard/Candidate/EditResume";
+import UpdateProfile from "../components/Dashboard/Candidate/UpdateProfile";
+import EmployerProfile from "../components/Dashboard/Employer/EmployerProfile";
+import MyJobs from "../components/Dashboard/Employer/MyJobs";
+import SubmitJobs from "../components/Dashboard/Employer/SubmitJobs";
+import JobApplicants from "../components/Dashboard/Employer/JobApplicants";
+import EmployerProfileUpdate from "../components/Dashboard/Employer/EmployerProfileUpdate";
 
 export const router = createBrowserRouter([
   {
@@ -84,8 +95,49 @@ export const router = createBrowserRouter([
       },
       // Candidate Route
       {
-        path: "add-hero-image",
-        Component: AddHeroImage,
+        path: "my-profile",
+        Component: MyProfile,
+      },
+      {
+        path: "my-apply-jobs",
+        Component: MyApplyJobs,
+      },
+      {
+        path: "my-resume",
+        Component: MyResumes,
+      },
+      {
+        path: "create-resume",
+        Component: CreateResumes,
+      },
+      {
+        path: "edit-resume",
+        Component: EditResume,
+      },
+      {
+        path: "update-profile",
+        Component: UpdateProfile,
+      },
+      // Employer Route
+      {
+        path: "employer-profile",
+        Component: EmployerProfile,
+      },
+      {
+        path: "submit-jobs",
+        Component: SubmitJobs,
+      },
+      {
+        path: "my-jobs",
+        Component: MyJobs,
+      },
+      {
+        path: "job-applicants",
+        Component: JobApplicants,
+      },
+      {
+        path: "employer-profile-update",
+        Component: EmployerProfileUpdate,
       },
     ],
   },

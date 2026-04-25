@@ -5,7 +5,6 @@ import userimage from "../assets/images/user.png";
 import { IoIosMenu } from "react-icons/io";
 import { IoClose, IoCloseOutline, IoMenu } from "react-icons/io5";
 import { AuthContext } from "../context/AuthContext/AuthContext";
-import Logout from "./Logout";
 
 const navLink = [
   {
@@ -96,7 +95,6 @@ const Navbar = () => {
                 Dashboard
               </button>
             </Link>
-            <Logout />
           </>
         )}
 
