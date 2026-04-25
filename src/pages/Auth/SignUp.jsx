@@ -23,7 +23,11 @@ const SignUp = () => {
         }
       })
       .catch((error) => {
-        toast.error("Something Error!");
+        if (error.code === "auth/email-already-in-use") {
+          toast.error("Email already exists!");
+        } else {
+          toast.error(error.message);
+        }
       });
   };
 

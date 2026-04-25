@@ -10,6 +10,11 @@ import SignUp from "../pages/Auth/SignUp";
 import Dashboard from "../layouts/Dashboard";
 import DashboardHome from "../components/Dashboard/DashboardHome";
 import ErrorPage from "../components/ErrorPage";
+import AllUser from "../components/Dashboard/Admin/AllUser";
+import AllBlogs from "../components/Dashboard/Admin/AllBlogs";
+import AllJobs from "../components/Dashboard/Admin/AllJobs";
+import AddBlogs from "../components/Dashboard/Admin/AddBlogs";
+import AddHeroImage from "../components/Dashboard/Admin/AddHeroImage";
 
 export const router = createBrowserRouter([
   {
@@ -55,6 +60,32 @@ export const router = createBrowserRouter([
       {
         index: true,
         Component: DashboardHome,
+      },
+      // Admin Route
+      {
+        path: "all-user",
+        Component: AllUser,
+      },
+      {
+        path: "all-blogs",
+        Component: AllBlogs,
+      },
+      {
+        path: "all-jobs",
+        Component: AllJobs,
+      },
+      {
+        path: "add-blogs",
+        Component: AddBlogs,
+      },
+      {
+        path: "add-hero-image",
+        Component: AddHeroImage,
+      },
+      // Candidate Route
+      {
+        path: "add-hero-image",
+        Component: AddHeroImage,
       },
     ],
   },
