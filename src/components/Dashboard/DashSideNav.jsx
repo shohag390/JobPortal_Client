@@ -15,7 +15,7 @@ import { NavLink } from "react-router";
 import profile from "../../assets/images/user.avif";
 
 const DashSideNav = () => {
-  const [role, setRole] = useState("admin");
+  const [role, setRole] = useState("employer");
 
   return (
     <div className="h-screen lg:w-[25%] 2xl:w-[20%] fixed bg-[#ffffff]">
