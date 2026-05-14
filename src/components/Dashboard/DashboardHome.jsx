@@ -4,7 +4,7 @@ import CandidateHome from "./Candidate/CandidateHome";
 import EmployerHome from "./Employer/EmployerHome";
 
 const DashboardHome = () => {
-  const [role, setRole] = useState("admin");
+  const [role, setRole] = useState("candidate");
 
   return (
     <div>

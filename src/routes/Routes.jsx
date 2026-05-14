@@ -19,7 +19,6 @@ import MyProfile from "../components/Dashboard/Candidate/MyProfile";
 import MyApplyJobs from "../components/Dashboard/Candidate/MyApplyJobs";
 import MyResumes from "../components/Dashboard/Candidate/MyResumes";
 import CreateResumes from "../components/Dashboard/Candidate/CreateResumes";
-import EditResume from "../components/Dashboard/Candidate/EditResume";
 import UpdateProfile from "../components/Dashboard/Candidate/UpdateProfile";
 import EmployerProfile from "../components/Dashboard/Employer/EmployerProfile";
 import MyJobs from "../components/Dashboard/Employer/MyJobs";
@@ -109,10 +108,6 @@ export const router = createBrowserRouter([
       {
         path: "create-resume",
         Component: CreateResumes,
-      },
-      {
-        path: "edit-resume",
-        Component: EditResume,
       },
       {
         path: "update-profile",

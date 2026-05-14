@@ -12,12 +12,25 @@ import {
 import { PiFlagBannerFill, PiReadCvLogoFill } from "react-icons/pi";
 import { RiFileEditFill } from "react-icons/ri";
 import { NavLink } from "react-router";
+import profile from "../../assets/images/user.avif";
 
 const DashSideNav = () => {
-  const [role, setRole] = useState("employer");
+  const [role, setRole] = useState("candidate");
 
   return (
     <div className="h-screen lg:w-[25%] 2xl:w-[20%] fixed bg-[#ffffff]">
+      <div className="pt-8 pb-6 px-6 lg:px-7 2xl:px-8 flex flex-col items-center justify-center gap-2">
+        <img className="h-50 w-50 rounded-full" src={profile} alt="" />
+        <h4 className="lg:text-[22px] 2xl:text-[25px] lg:font-semibold 2xl:font-bold uppercase">
+          Md Shohag Ali
+        </h4>
+        <div className="w-[50%] h-0.5 bg-[#1d4ed8]"></div>
+      </div>
+
+      <h4 className="px-6 lg:px-7 2xl:px-8 text-[16px] pb-1 border-b font-semibold uppercase text-[#64748b]">
+        Dashboard Menu
+      </h4>
+
       {role === "admin" && (
         <div className="flex flex-col">
           <NavLink
