@@ -9,6 +9,7 @@ import {
   FaBuilding,
   FaGlobe,
 } from "react-icons/fa";
+import DashboardHeader from "../DashboardHeader";
 
 const EmployerProfile = () => {
   const employer = {
@@ -23,49 +24,47 @@ const EmployerProfile = () => {
     postalCode: "1207",
     location: "Dhaka, Bangladesh",
     website: "www.techcorp.com",
-    image: "https://i.ibb.co/7QpKsCX/avatar.png",
+    image: "https://i.ibb.co.com/Jw5qDrk5/user2.jpg",
     about:
       "We are a global tech company hiring developers, designers, and product managers for remote and onsite roles.",
   };
 
   return (
-    <div className="min-h-screen bg-[#f5f6fa] p-6">
+    <div className="px-6 lg:px-7 2xl:px-8">
       {/* Page Title */}
-      <h1 className="text-2xl font-bold text-[#0f3d2e] mb-6">
-        Employer Profile
-      </h1>
+      <DashboardHeader
+        title={"Employer Profile"}
+        subTitle={"Innovative, Collaborative, Growth-Focused Team"}
+      />
 
-      {/* ================= PROFILE CARD ================= */}
-      <div className="bg-white rounded-3xl p-8 shadow-sm">
-        <div className="flex flex-col md:flex-row md:items-center gap-6">
+      {/* PROFILE CARD */}
+      <div className="bg-[#ffff] p-4 lg:p-5 2xl:p-6 companie-card border border-[#cccccc5d] rounded-2xl">
+        <div className="flex items-center gap-6">
           {/* Image */}
-          <div className="relative">
+          <div>
             <img
               src={employer.image}
               alt="profile"
-              className="w-24 h-24 rounded-full object-cover"
+              className="w-25 md:w-28 lg:w-30 h-25 md:h-28 lg:h-30 rounded-full object-cover"
             />
-
-            {/* Camera Icon */}
-            <button className="absolute bottom-1 right-1 bg-[#0f3d2e] text-white p-2 rounded-full">
-              <FaCamera size={12} />
-            </button>
           </div>
 
           {/* Info */}
           <div>
-            <h2 className="text-2xl font-semibold text-[#0f3d2e]">
+            <h2 className="text-[16px] md:text-[18px] lg:text-[20px] font-semibold">
               {employer.firstName} {employer.lastName}
             </h2>
 
-            <p className="text-gray-500 mt-1">{employer.role}</p>
+            <p className="text-[14px] md:text-[16px] text-[#64748b] mt-1">
+              {employer.role}
+            </p>
 
-            <div className="flex items-center gap-2 mt-2 text-gray-500">
+            <div className="text-[14px] md:text-[16px] text-[#64748b] flex items-center gap-2 mt-2">
               <FaMapMarkerAlt />
               <span>{employer.location}</span>
             </div>
 
-            <div className="flex items-center gap-2 mt-1 text-gray-500">
+            <div className="flex items-center gap-2 mt-1 text-[14px] md:text-[16px] text-[#64748b]">
               <FaBuilding />
               <span>{employer.company}</span>
             </div>
@@ -73,128 +72,118 @@ const EmployerProfile = () => {
         </div>
       </div>
 
-      {/* ================= COMPANY INFORMATION ================= */}
-      <div className="bg-white rounded-3xl p-8 shadow-sm mt-6">
+      {/*  COMPANY INFORMATION  */}
+      <div className="bg-[#ffff] p-4 lg:p-5 2xl:p-6 companie-card border border-[#cccccc5d] rounded-2xl my-3 md:my-4 lg:my-6">
         {/* Header */}
-        <div className="flex items-center justify-between border-b pb-4 mb-6">
-          <h2 className="text-2xl font-semibold text-[#0f3d2e]">
+        <div className="flex items-center justify-between border-b border-[#64748b28] pb-2 lg:pb-3">
+          <h2 className="text-[16px] md:text-[18px] lg:text-[20px] font-semibold">
             Company Information
           </h2>
 
-          <button className="bg-orange-400 hover:bg-orange-500 text-white px-5 py-2 rounded-xl flex items-center gap-2 transition">
+          <button className="bg-[#1d4fd841] hover:bg-[#003ad8] duration-500 py-1.5 md:py-2 lg:py-3 px-6 md:px-8 lg:px-10 rounded-full text-[#003ad8] hover:text-[#ffff] text-[14px] md:text-[16px] flex items-center justify-center gap-2">
             <FaEdit />
             Edit
           </button>
         </div>
 
-        {/* Info Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* Info */}
+        <div className="grid md:grid-cols-3 gap-3 md:gap-4 lg:gap-5 2xl:gap-6">
           {/* First Name */}
-          <div>
-            <p className="text-gray-400 mb-2">First Name</p>
-            <h3 className="font-semibold text-lg text-gray-800">
+          <div className="pt-4">
+            <p className="font-medium text-[18px]">First Name</p>
+            <p className="text-[14px] md:text-[16px] text-[#64748b]">
               {employer.firstName}
-            </h3>
+            </p>
           </div>
 
           {/* Last Name */}
-          <div>
-            <p className="text-gray-400 mb-2">Last Name</p>
-            <h3 className="font-semibold text-lg text-gray-800">
+          <div className="pt-4">
+            <p className="font-medium text-[18px]">Last Name</p>
+            <p className="text-[14px] md:text-[16px] text-[#64748b]">
               {employer.lastName}
-            </h3>
+            </p>
           </div>
 
           {/* Role */}
-          <div>
-            <p className="text-gray-400 mb-2">Role</p>
-            <h3 className="font-semibold text-lg text-gray-800">
+          <div className="pt-4">
+            <p className="font-medium text-[18px]">Role</p>
+            <p className="text-[14px] md:text-[16px] text-[#64748b]">
               {employer.role}
-            </h3>
+            </p>
           </div>
 
           {/* Email */}
-          <div>
-            <p className="text-gray-400 mb-2">Email Address</p>
-
-            <div className="flex items-center gap-2">
-              <FaEnvelope className="text-gray-400" />
-              <h3 className="font-semibold text-lg text-gray-800">
-                {employer.email}
-              </h3>
-            </div>
+          <div className="pt-4">
+            <p className="font-medium text-[18px]">Email Address</p>
+            <p className="text-[14px] md:text-[16px] text-[#64748b]">
+              {employer.email}
+            </p>
           </div>
 
           {/* Phone */}
-          <div>
-            <p className="text-gray-400 mb-2">Phone Number</p>
-
-            <div className="flex items-center gap-2">
-              <FaPhoneAlt className="text-gray-400" />
-              <h3 className="font-semibold text-lg text-gray-800">
-                {employer.phone}
-              </h3>
-            </div>
+          <div className="pt-4">
+            <p className="font-medium text-[18px]">Phone Number</p>
+            <p className="text-[14px] md:text-[16px] text-[#64748b]">
+              {employer.phone}
+            </p>
           </div>
 
           {/* Website */}
-          <div>
-            <p className="text-gray-400 mb-2">Website</p>
-
-            <div className="flex items-center gap-2">
-              <FaGlobe className="text-gray-400" />
-              <h3 className="font-semibold text-lg text-gray-800">
-                {employer.website}
-              </h3>
-            </div>
+          <div className="pt-4">
+            <p className="font-medium text-[18px]">Website</p>
+            <p className="text-[14px] md:text-[16px] text-[#64748b]">
+              {employer.website}
+            </p>
           </div>
         </div>
       </div>
 
-      {/* ================= ADDRESS SECTION ================= */}
-      <div className="bg-white rounded-3xl p-8 shadow-sm mt-6">
+      {/* ADDRESS SECTION  */}
+      <div className="bg-[#ffff] p-4 lg:p-5 2xl:p-6 companie-card border border-[#cccccc5d] rounded-2xl mb-3 md:mb-4 lg:mb-6">
         {/* Header */}
-        <div className="flex items-center justify-between border-b pb-4 mb-6">
-          <h2 className="text-2xl font-semibold text-[#0f3d2e]">Address</h2>
+        <div className="flex items-center justify-between border-b border-[#64748b28] pb-2 lg:pb-3">
+          <h2 className="text-[16px] md:text-[18px] lg:text-[20px] font-semibold">
+            Address
+          </h2>
 
-          <button className="border border-gray-300 hover:bg-gray-100 px-5 py-2 rounded-xl flex items-center gap-2 transition">
+          <button className="bg-[#1d4fd841] hover:bg-[#003ad8] duration-500 py-1.5 md:py-2 lg:py-3 px-6 md:px-8 lg:px-10 rounded-full text-[#003ad8] hover:text-[#ffff] text-[14px] md:text-[16px] flex items-center justify-center gap-2">
             <FaEdit />
             Edit
           </button>
         </div>
 
         {/* Address Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
-          <div>
-            <p className="text-gray-400 mb-2">Country</p>
-            <h3 className="font-semibold text-lg text-gray-800">
+        <div className="grid md:grid-cols-3 gap-3 md:gap-4 lg:gap-5 2xl:gap-6">
+          <div className="pt-4">
+            <p className="font-medium text-[18px]">Country</p>
+            <h3 className="text-[14px] md:text-[16px] text-[#64748b]">
               {employer.country}
             </h3>
           </div>
 
-          <div>
-            <p className="text-gray-400 mb-2">City</p>
-            <h3 className="font-semibold text-lg text-gray-800">
+          <div className="pt-4">
+            <p className="font-medium text-[18px]">City</p>
+            <h3 className="text-[14px] md:text-[16px] text-[#64748b]">
               {employer.city}
             </h3>
           </div>
 
-          <div>
-            <p className="text-gray-400 mb-2">Postal Code</p>
-            <h3 className="font-semibold text-lg text-gray-800">
+          <div className="pt-4">
+            <p className="font-medium text-[18px]">Postal Code</p>
+            <h3 className="text-[14px] md:text-[16px] text-[#64748b]">
               {employer.postalCode}
             </h3>
           </div>
         </div>
       </div>
 
-      {/* ================= ABOUT COMPANY ================= */}
-      <div className="bg-white rounded-3xl p-8 shadow-sm mt-6">
-        <h2 className="text-2xl font-semibold text-[#0f3d2e] mb-4">
+      {/*  ABOUT COMPANY  */}
+      <div className="bg-[#ffff] p-4 lg:p-5 2xl:p-6 companie-card border border-[#cccccc5d] rounded-2xl mb-3 md:mb-4 lg:mb-6">
+        <h2 className="text-[16px] md:text-[18px] lg:text-[20px] font-semibold">
           About Company
         </h2>
 
-        <p className="text-gray-600 leading-relaxed">{employer.about}</p>
+        <p className="text-[#64748b] leading-relaxed">{employer.about}</p>
       </div>
     </div>
   );

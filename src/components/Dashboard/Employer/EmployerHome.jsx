@@ -9,6 +9,8 @@ import {
   FaEye,
   FaCalendarAlt,
 } from "react-icons/fa";
+import DashboardHeader from "../DashboardHeader";
+import { MdReport } from "react-icons/md";
 
 const EmployerHome = () => {
   const stats = [
@@ -32,13 +34,6 @@ const EmployerHome = () => {
       icon: <FaCheckCircle />,
       color: "bg-emerald-500",
       desc: "Successful hires",
-    },
-    {
-      title: "Pending Review",
-      value: "320",
-      icon: <FaHourglassHalf />,
-      color: "bg-orange-500",
-      desc: "Waiting for review",
     },
     {
       title: "Rejected",
@@ -67,65 +62,74 @@ const EmployerHome = () => {
   ];
 
   return (
-    <div className="px-6 lg:px-8 min-h-screen bg-gray-50">
+    <div className="px-6 lg:px-7 2xl:px-8">
       {/* HEADER */}
-      <div className="py-6">
-        <h1 className="text-2xl font-bold text-gray-800">Employer Dashboard</h1>
-        <p className="text-gray-500">
-          Manage your hiring process, jobs, and applicants in one place.
-        </p>
-      </div>
+      <DashboardHeader
+        title={"Employer Dashboard"}
+        subTitle={
+          "Manage your hiring process, jobs, and applicants in one place."
+        }
+      />
 
       {/* KPI CARDS */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 lg:gap-5 2xl:gap-6">
         {stats.map((item, i) => (
           <div
             key={i}
-            className="bg-white p-5 rounded-xl shadow-sm hover:shadow-md transition"
+            className="bg-[#ffff] p-4 lg:p-5 2xl:p-6 companie-card border border-[#cccccc5d] rounded-2xl hover:-translate-y-1 duration-500 cursor-pointer"
           >
-            <div className="flex items-center justify-between">
+            <div className="flex items-start justify-between">
               <div>
-                <p className="text-gray-500 text-sm">{item.title}</p>
-                <h2 className="text-xl font-bold">{item.value}</h2>
+                <h2 className="font-medium md:font-semibold lg:font-bold">
+                  {item.title}
+                </h2>
+                <h1 className="text-[16px] md:text-[18px] lg:text-[20px] font-medium md:font-semibold lg:font-bold">
+                  {item.value}
+                </h1>
+                <p className="text-[#64748b] text-[14px] md:text-[16px]">
+                  {item.desc}
+                </p>
               </div>
-
-              <div className={`text-white p-3 rounded-full ${item.color}`}>
+              <div
+                className={`text-[#ffff] flex items-center justify-center text-[20px] h-11 md:h-12 lg:h-12.5 w-11 md:w-12 lg:w-12.5 rounded-full ${item.color}`}
+              >
                 {item.icon}
               </div>
             </div>
-            <p className="text-xs text-gray-400 mt-2">{item.desc}</p>
           </div>
         ))}
       </div>
 
       {/* QUICK ACTION + INTERVIEW */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-4 lg:gap-5 2xl:gap-6 py-3 md:py-4 lg:py-6">
         {/* Quick Actions */}
-        <div className="bg-white p-5 rounded-xl shadow-sm">
-          <h3 className="text-lg font-semibold mb-4">Quick Actions</h3>
+        <div className="bg-[#ffff] p-4 lg:p-5 2xl:p-6 companie-card border border-[#cccccc5d] rounded-2xl">
+          <h3 className="text-[16px] md:text-[18px] lg:text-[20px] font-semibold pb-2 md:pb-3 lg:pb-4">
+            Quick Actions
+          </h3>
 
           <div className="grid grid-cols-2 gap-3">
-            <button className="bg-blue-500 text-white py-3 rounded-lg flex items-center justify-center gap-2">
+            <button className="bg-[#1d4ed8] hover:bg-[#003ad8] duration-500 py-1.5 md:py-2 lg:py-3 px-6 md:px-8 lg:px-10 rounded-full text-[#ffff] text-[14px] md:text-[16px] flex items-center justify-center gap-2">
               <FaPlus /> Post Job
             </button>
 
-            <button className="bg-green-500 text-white py-3 rounded-lg flex items-center justify-center gap-2">
+            <button className="bg-[#00b2e9] hover:bg-[#008fbb] duration-500 py-1.5 md:py-2 lg:py-3 px-6 md:px-8 lg:px-10 rounded-full text-[#ffff] text-[14px] md:text-[16px] flex items-center justify-center gap-2">
               <FaEye /> View Jobs
             </button>
 
-            <button className="bg-purple-500 text-white py-3 rounded-lg">
-              Applicants
+            <button className="bg-[#00b800] hover:bg-[#009700] duration-500 py-1.5 md:py-2 lg:py-3 px-6 md:px-8 lg:px-10 rounded-full text-[#ffff] text-[14px] md:text-[16px] flex items-center justify-center gap-2">
+              <FaBriefcase /> Applicants
             </button>
 
-            <button className="bg-orange-500 text-white py-3 rounded-lg">
-              Reports
+            <button className="bg-[#fd7608] hover:bg-[#d86100] duration-500 py-1.5 md:py-2 lg:py-3 px-6 md:px-8 lg:px-10 rounded-full text-[#ffff] text-[14px] md:text-[16px] flex items-center justify-center gap-2">
+              <MdReport /> Reports
             </button>
           </div>
         </div>
 
         {/* Interviews */}
-        <div className="bg-white p-5 rounded-xl shadow-sm">
-          <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+        <div className="bg-[#ffff] p-4 lg:p-5 2xl:p-6 companie-card border border-[#cccccc5d] rounded-2xl">
+          <h3 className="text-[16px] md:text-[18px] lg:text-[20px] font-semibold pb-2 md:pb-3 lg:pb-4 flex items-center gap-2">
             <FaCalendarAlt /> Today Interviews
           </h3>
 
@@ -135,8 +139,10 @@ const EmployerHome = () => {
                 key={idx}
                 className="flex justify-between bg-gray-50 p-3 rounded-lg"
               >
-                <span className="font-medium">{i.name}</span>
-                <span className="text-sm text-gray-500">
+                <span className="font-medium md:font-semibold lg:font-bold">
+                  {i.name}
+                </span>
+                <span className="text-[14px] md:text-[16px] text-[#64748b]">
                   {i.time} - {i.date}
                 </span>
               </li>
@@ -146,10 +152,12 @@ const EmployerHome = () => {
       </div>
 
       {/* JOBS + APPLICANTS */}
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3 md:gap-4 lg:gap-5 2xl:gap-6 pb-3 md:pb-4 lg:pb-6">
         {/* Recent Jobs */}
-        <div className="bg-white p-5 rounded-xl shadow-sm">
-          <h3 className="text-lg font-semibold mb-4">Recent Job Posts</h3>
+        <div className="bg-[#ffff] p-4 lg:p-5 2xl:p-6 companie-card border border-[#cccccc5d] rounded-2xl">
+          <h3 className="text-[16px] md:text-[18px] lg:text-[20px] font-semibold pb-2 md:pb-3 lg:pb-4">
+            Recent Job Posts
+          </h3>
 
           <ul className="space-y-3">
             {recentJobs.map((job, i) => (
@@ -158,8 +166,10 @@ const EmployerHome = () => {
                 className="flex justify-between items-center bg-gray-50 p-3 rounded-lg"
               >
                 <div>
-                  <p className="font-medium">{job.title}</p>
-                  <p className="text-xs text-gray-500">
+                  <p className="font-medium md:font-semibold lg:font-bold">
+                    {job.title}
+                  </p>
+                  <p className="text-[14px] md:text-[16px] text-[#64748b]">
                     {job.applicants} applicants
                   </p>
                 </div>
@@ -179,8 +189,10 @@ const EmployerHome = () => {
         </div>
 
         {/* Recent Applicants */}
-        <div className="bg-white p-5 rounded-xl shadow-sm">
-          <h3 className="text-lg font-semibold mb-4">Recent Applicants</h3>
+        <div className="bg-[#ffff] p-4 lg:p-5 2xl:p-6 companie-card border border-[#cccccc5d] rounded-2xl">
+          <h3 className="text-[16px] md:text-[18px] lg:text-[20px] font-semibold pb-2 md:pb-3 lg:pb-4">
+            Recent Applicants
+          </h3>
 
           <ul className="space-y-3">
             {recentApplicants.map((a, i) => (
@@ -189,8 +201,12 @@ const EmployerHome = () => {
                 className="flex justify-between items-center bg-gray-50 p-3 rounded-lg"
               >
                 <div>
-                  <p className="font-medium">{a.name}</p>
-                  <p className="text-xs text-gray-500">{a.job}</p>
+                  <p className="font-medium md:font-semibold lg:font-bold">
+                    {a.name}
+                  </p>
+                  <p className="text-[14px] md:text-[16px] text-[#64748b]">
+                    {a.job}
+                  </p>
                 </div>
 
                 <span

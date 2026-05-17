@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaSearch, FaEye, FaCheck, FaTimes } from "react-icons/fa";
+import DashboardHeader from "../DashboardHeader";
 
 const JobApplicants = () => {
   const [search, setSearch] = useState("");
@@ -51,15 +52,13 @@ const JobApplicants = () => {
   );
 
   return (
-    <div className="px-6 lg:px-8 min-h-screen bg-gray-50">
+    <div className="px-6 lg:px-7 2xl:px-8 pb-7">
       {/* Header */}
-      <div className="py-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-        <div>
-          <h1 className="text-2xl font-bold text-gray-800">Job Applicants</h1>
-          <p className="text-gray-500">
-            Manage all applicants for your job posts
-          </p>
-        </div>
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 lg:gap-0">
+        <DashboardHeader
+          title={"Job Applicants"}
+          subTitle={"Manage all applicants for your job posts"}
+        />
 
         {/* Search */}
         <div className="relative w-full md:w-80">
@@ -67,7 +66,7 @@ const JobApplicants = () => {
           <input
             type="text"
             placeholder="Search applicants..."
-            className="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full pl-10 pr-4 py-2 border border-[#cccccc5d] bg-[#cccccc17] focus:outline-0  rounded-lg"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
@@ -75,42 +74,41 @@ const JobApplicants = () => {
       </div>
 
       {/* Table */}
-      <div className="bg-white shadow-sm rounded-xl overflow-hidden">
+      <div className="bg-[#ffff] companie-card border border-[#cccccc5d] rounded-2xl overflow-auto">
         <table className="w-full text-left">
           {/* Head */}
-          <thead className="bg-gray-100 text-gray-600 text-sm">
+          <thead className="bg-gray-100 text-[15px] lg:text-[16px]">
             <tr>
-              <th className="p-3">Name</th>
-              <th className="p-3">Email</th>
-              <th className="p-3">Job Title</th>
-              <th className="p-3">Experience</th>
-              <th className="p-3">Applied Date</th>
-              <th className="p-3">Status</th>
-              <th className="p-3 text-center">Actions</th>
+              <th className="py-6 px-4">Name</th>
+              <th className="py-6 px-4">Email</th>
+              <th className="py-6 px-4">Job Title</th>
+              <th className="py-6 px-4">Applied Date</th>
+              <th className="py-6 px-4">Status</th>
+              <th className="py-6 px-4 text-center">Actions</th>
             </tr>
           </thead>
 
           {/* Body */}
           <tbody>
             {filteredApplicants.map((a) => (
-              <tr key={a.id} className="border-b hover:bg-gray-50">
+              <tr
+                key={a.id}
+                className="border-b border-[#cccccc5d] hover:bg-gray-50"
+              >
                 {/* Name */}
-                <td className="p-3 font-medium text-gray-800">{a.name}</td>
+                <td className="py-5 px-4 font-medium">{a.name}</td>
 
                 {/* Email */}
-                <td className="p-3 text-gray-600">{a.email}</td>
+                <td className="py-5 px-4 text-[#64748b]">{a.email}</td>
 
                 {/* Job Title */}
-                <td className="p-3">{a.jobTitle}</td>
-
-                {/* Experience */}
-                <td className="p-3">{a.experience}</td>
+                <td className="py-5 px-4 text-[#64748b]">{a.jobTitle}</td>
 
                 {/* Date */}
-                <td className="p-3 text-gray-600">{a.appliedDate}</td>
+                <td className="py-5 px-4 text-[#64748b]">{a.appliedDate}</td>
 
                 {/* Status */}
-                <td className="p-3">
+                <td className="py-5 px-4">
                   <span
                     className={`px-3 py-1 text-xs rounded-full font-medium
                     ${a.status === "Pending" && "bg-yellow-100 text-yellow-700"}

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { FaSearch, FaEye, FaTimes } from "react-icons/fa";
+import DashboardHeader from "../DashboardHeader";
 
 const MyApplyJobs = () => {
   const [search, setSearch] = useState("");
@@ -54,13 +55,13 @@ const MyApplyJobs = () => {
   );
 
   return (
-    <div className="px-6 lg:px-8 min-h-screen bg-gray-50">
+    <div className="px-6 lg:px-7 2xl:px-8 pb-7">
       {/* Header */}
-      <div className="py-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-        <div>
-          <h1 className="text-2xl font-bold text-gray-800">My Applied Jobs</h1>
-          <p className="text-gray-500">Track your job applications easily</p>
-        </div>
+      <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 lg:gap-0">
+        <DashboardHeader
+          title={"My Applied Jobs"}
+          subTitle={"Track your job applications easily"}
+        />
 
         {/* Search */}
         <div className="relative w-full md:w-80">
@@ -68,7 +69,7 @@ const MyApplyJobs = () => {
           <input
             type="text"
             placeholder="Search jobs..."
-            className="w-full pl-10 pr-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full pl-10 pr-4 py-2 border border-[#cccccc5d] bg-[#cccccc17] focus:outline-0 rounded-lg"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
@@ -76,51 +77,43 @@ const MyApplyJobs = () => {
       </div>
 
       {/* Table */}
-      <div className="bg-white shadow-sm rounded-xl overflow-hidden">
+      <div className="bg-[#ffff] companie-card border border-[#cccccc5d] rounded-2xl overflow-auto">
         <table className="w-full text-left">
           {/* Head */}
-          <thead className="bg-gray-100 text-gray-600 text-sm">
+          <thead className="bg-gray-100 text-[15px] lg:text-[16px]">
             <tr>
-              <th className="p-3">Company</th>
-              <th className="p-3">Position</th>
-              <th className="p-3">Location</th>
-              <th className="p-3">Salary</th>
-              <th className="p-3">Apply Date</th>
-              <th className="p-3">Status</th>
-              <th className="p-3 text-center">Actions</th>
+              <th className="py-6 px-4">Position</th>
+              <th className="py-6 px-4">Location</th>
+              <th className="py-6 px-4">Salary</th>
+              <th className="py-6 px-4">Apply Date</th>
+              <th className="py-6 px-4">Status</th>
+              <th className="py-6 px-4 text-center">Actions</th>
             </tr>
           </thead>
 
           {/* Body */}
           <tbody>
             {filteredJobs.map((job) => (
-              <tr key={job.id} className="border-b hover:bg-gray-50">
-                {/* Company */}
-                <td className="p-3">
-                  <div className="flex items-center gap-3">
-                    <img
-                      src={job.logo}
-                      alt={job.company}
-                      className="w-10 h-10 rounded-lg border bg-white p-1"
-                    />
-                    <span className="font-medium">{job.company}</span>
-                  </div>
-                </td>
-
+              <tr
+                key={job.id}
+                className="border-b border-[#cccccc5d] hover:bg-gray-50"
+              >
                 {/* Position */}
-                <td className="p-3 text-gray-700">{job.position}</td>
+                <td className="py-5 px-4 font-medium">{job.position}</td>
 
                 {/* Location */}
-                <td className="p-3 text-gray-600">{job.location}</td>
+                <td className="py-5 px-4 text-[#64748b]">{job.location}</td>
 
                 {/* Salary */}
-                <td className="p-3">{job.salary}</td>
+                <td className="py-5 px-4 text-[#64748b] font-medium">
+                  {job.salary}
+                </td>
 
                 {/* Date */}
-                <td className="p-3 text-gray-600">{job.applyDate}</td>
+                <td className="py-5 px-4 text-gray-600">{job.applyDate}</td>
 
                 {/* Status */}
-                <td className="p-3">
+                <td className="py-5 px-4">
                   <span
                     className={`px-3 py-1 text-xs rounded-full font-medium
                     ${
@@ -140,12 +133,12 @@ const MyApplyJobs = () => {
 
                 {/* Actions */}
                 <td className="p-3">
-                  <div className="flex justify-center gap-3 text-gray-600">
-                    <button className="hover:text-blue-500">
+                  <div className="flex justify-center gap-3">
+                    <button className="hover:text-blue-500 duration-500">
                       <FaEye />
                     </button>
 
-                    <button className="hover:text-red-500">
+                    <button className="hover:text-red-500 duration-500">
                       <FaTimes />
                     </button>
                   </div>

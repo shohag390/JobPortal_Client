@@ -8,6 +8,8 @@ import {
   FaChartLine,
   FaMapMarkerAlt,
 } from "react-icons/fa";
+import DashboardHeader from "../DashboardHeader";
+import { Link } from "react-router";
 
 const CandidateHome = () => {
   const stats = [
@@ -75,42 +77,33 @@ const CandidateHome = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#f4f5f9] p-6">
-      {/* ================= HEADER ================= */}
-      <div className="flex flex-col md:flex-row justify-between items-center mb-8">
-        <div>
-          <h1 className="text-4xl font-bold text-[#0f3d2e]">
-            Candidate Dashboard
-          </h1>
+    <div className="px-6 lg:px-7 2xl:px-8">
+      {/* HEADER */}
+      <DashboardHeader
+        title={"Candidate Dashboard"}
+        subTitle={"Welcome back Track your applications and career progress."}
+      />
 
-          <p className="text-gray-500 mt-2">
-            Welcome back 👋 Track your applications and career progress.
-          </p>
-        </div>
-
-        <button className="mt-4 md:mt-0 bg-[#0f3d2e] hover:bg-[#0b2e22] text-white px-6 py-3 rounded-2xl font-medium transition">
-          Apply New Job
-        </button>
-      </div>
-
-      {/* ================= STATS ================= */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 mb-8">
+      {/*  STATS  */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4 lg:gap-5 2xl:gap-6 pb-3 md:pb-4 lg:pb-5 2xl:pb-6">
         {stats.map((stat) => (
           <div
             key={stat.id}
-            className="bg-white rounded-3xl p-6 shadow-sm hover:shadow-lg transition duration-300"
+            className="bg-[#ffff] p-4 lg:p-5 2xl:p-6 companie-card border border-[#cccccc5d] rounded-2xl hover:-translate-y-1 duration-500 cursor-pointer"
           >
-            <div className="flex items-center justify-between">
+            <div className="flex items-start justify-between">
               <div>
-                <p className="text-gray-500 text-sm">{stat.title}</p>
-
-                <h2 className="text-4xl font-bold mt-3 text-gray-800">
-                  {stat.value}
+                <h2 className="font-medium md:font-semibold lg:font-bold">
+                  {stat.title}
                 </h2>
+
+                <h1 className="text-[16px] md:text-[18px] lg:text-[20px] font-medium md:font-semibold lg:font-bold">
+                  {stat.value}
+                </h1>
               </div>
 
               <div
-                className={`${stat.bg} ${stat.text} w-16 h-16 rounded-2xl flex items-center justify-center text-3xl`}
+                className={`${stat.bg} ${stat.text} text-[#ffff] flex items-center justify-center text-[20px] h-11 md:h-12 lg:h-12.5 w-11 md:w-12 lg:w-12.5 rounded-full`}
               >
                 {stat.icon}
               </div>
@@ -119,36 +112,34 @@ const CandidateHome = () => {
         ))}
       </div>
 
-      {/* ================= MAIN GRID ================= */}
-      <div className="grid lg:grid-cols-3 gap-8">
-        {/* ================= RECENT APPLICATIONS ================= */}
-        <div className="lg:col-span-2 bg-white rounded-3xl shadow-sm p-6">
-          <div className="flex justify-between items-center border-b pb-4 mb-6">
-            <h2 className="text-2xl font-semibold text-[#0f3d2e]">
+      {/* MAIN GRID */}
+      <div className="grid lg:grid-cols-3 gap-3 md:gap-4 lg:gap-5 2xl:gap-6 pb-3 md:pb-4 lg:pb-5 2xl:pb-6">
+        {/*  RECENT APPLICATIONS */}
+        <div className="lg:col-span-2 bg-[#ffff] p-4 lg:p-5 2xl:p-6 companie-card border border-[#cccccc5d] rounded-2xl">
+          <div className="border-b border-[#cccccc5d]">
+            <h2 className="text-[16px] md:text-[18px] lg:text-[20px] font-semibold pb-2 md:pb-3 lg:pb-4">
               Recent Applications
             </h2>
-
-            <button className="text-[#0f3d2e] font-medium hover:underline">
-              View All
-            </button>
           </div>
 
-          <div className="space-y-5">
+          <div className="grid grid-cols-1 gap-3 md:gap-4 lg:gap-5 2xl:gap-6 pt-6">
             {recentApplications.map((job) => (
               <div
                 key={job.id}
-                className="border border-gray-100 rounded-2xl p-5 hover:shadow-md transition duration-300"
+                className="p-4 lg:p-5 2xl:p-6 border border-[#cccccc5d] rounded-2xl"
               >
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                   {/* Left */}
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-800">
+                    <h3 className="font-medium md:font-semibold lg:font-bold">
                       {job.position}
                     </h3>
 
-                    <p className="text-gray-500 mt-1">{job.company}</p>
+                    <p className="text-[#64748b] text-[14px] md:text-[16px] pt-2">
+                      {job.company}
+                    </p>
 
-                    <div className="flex items-center gap-2 mt-3 text-gray-500">
+                    <div className="flex items-center gap-2 mt-3 text-[#64748b] text-[14px] md:text-[16px]">
                       <FaMapMarkerAlt />
                       <span>{job.location}</span>
                     </div>
@@ -187,127 +178,88 @@ const CandidateHome = () => {
           </div>
         </div>
 
-        {/* ================= RIGHT SIDEBAR ================= */}
-        <div className="space-y-8">
+        {/* RIGHT SIDEBAR  */}
+        <div className="">
           {/* Profile Card */}
-          <div className="bg-white rounded-3xl shadow-sm p-6">
+          <div className="bg-[#ffff] p-4 lg:p-5 2xl:p-6 companie-card border border-[#cccccc5d] rounded-2xl">
             <div className="flex flex-col items-center text-center">
               <img
-                src="https://i.ibb.co/7QpKsCX/avatar.png"
+                src="https://i.ibb.co.com/Jw5qDrk5/user2.jpg"
                 alt="profile"
-                className="w-28 h-28 rounded-full object-cover border-4 border-[#0f3d2e]"
+                className="w-28 h-28 rounded-full object-cover border-4 border-[#cccccc5d]"
               />
 
-              <h2 className="text-2xl font-bold mt-4 text-[#0f3d2e]">
+              <h2 className="text-[16px] md:text-[18px] lg:text-[20px] font-medium md:font-semibold lg:font-bold">
                 Md Shohag Ali
               </h2>
 
-              <p className="text-gray-500 mt-1">Frontend Developer</p>
+              <p className="text-[#64748b] text-[14px] md:text-[16px] pb-4">
+                Frontend Developer
+              </p>
 
-              <button className="mt-5 bg-[#0f3d2e] hover:bg-[#0b2e22] text-white px-6 py-3 rounded-2xl transition">
+              <button className="bg-[#1d4fd841] hover:bg-[#003ad8] duration-500 py-1.5 lg:py-2 px-5 lg:px-6 rounded-full text-[#003ad8] hover:text-[#ffff] text-[14px] md:text-[16px]">
                 View Profile
               </button>
             </div>
           </div>
 
-          {/* Activity */}
-          <div className="bg-white rounded-3xl shadow-sm p-6">
-            <div className="flex items-center gap-3 border-b pb-4 mb-6">
-              <FaChartLine className="text-[#0f3d2e] text-2xl" />
-
-              <h2 className="text-2xl font-semibold text-[#0f3d2e]">
-                Activity
+          {/*  JOB PROGRESS  */}
+          <div className="bg-[#ffff] p-4 lg:p-5 2xl:p-6 companie-card border border-[#cccccc5d] rounded-2xl mt-3 md:mt-4 lg:mt-5 2xl:mt-6 pt-6">
+            <div className="border-b border-[#cccccc5d] pb-4 mb-6">
+              <h2 className="text-[16px] md:text-[18px] lg:text-[20px] font-semibold">
+                Job Application Progress
               </h2>
             </div>
 
-            <div className="space-y-5">
-              <div className="flex items-start gap-4">
-                <div className="bg-green-100 text-green-600 p-3 rounded-xl">
-                  <FaCheckCircle />
+            <div className="space-y-6">
+              {/* Progress Item */}
+              <div>
+                <div className="flex justify-between mb-2">
+                  <h3 className="font-medium md:font-semibold lg:font-bold">
+                    Frontend Developer
+                  </h3>
+
+                  <span className="text-[#64748b] text-[14px] md:text-[16px]">
+                    80%
+                  </span>
                 </div>
 
-                <div>
-                  <h3 className="font-semibold">Resume Uploaded</h3>
-
-                  <p className="text-sm text-gray-500">2 hours ago</p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="bg-yellow-100 text-yellow-600 p-3 rounded-xl">
-                  <FaClock />
-                </div>
-
-                <div>
-                  <h3 className="font-semibold">Interview Scheduled</h3>
-
-                  <p className="text-sm text-gray-500">Yesterday</p>
+                <div className="w-full bg-gray-200 rounded-full h-3">
+                  <div className="bg-[#bc92ff] h-3 rounded-full w-[80%]"></div>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="bg-blue-100 text-blue-600 p-3 rounded-xl">
-                  <FaBriefcase />
+              <div>
+                <div className="flex justify-between mb-2">
+                  <h3 className="font-medium md:font-semibold lg:font-bold">
+                    MERN Stack Developer
+                  </h3>
+
+                  <span className="text-[#64748b] text-[14px] md:text-[16px]">
+                    60%
+                  </span>
                 </div>
 
-                <div>
-                  <h3 className="font-semibold">Applied for Google</h3>
-
-                  <p className="text-sm text-gray-500">3 days ago</p>
+                <div className="w-full bg-gray-200 rounded-full h-3">
+                  <div className="bg-[#0098a3] h-3 rounded-full w-[60%]"></div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      {/* ================= JOB PROGRESS ================= */}
-      <div className="bg-white rounded-3xl shadow-sm p-6 mt-8">
-        <div className="flex justify-between items-center border-b pb-4 mb-6">
-          <h2 className="text-2xl font-semibold text-[#0f3d2e]">
-            Job Application Progress
-          </h2>
+              <div>
+                <div className="flex justify-between mb-2">
+                  <h3 className="font-medium md:font-semibold lg:font-bold">
+                    React Developer
+                  </h3>
 
-          <button className="text-[#0f3d2e] hover:underline">
-            View Reports
-          </button>
-        </div>
+                  <span className="text-[#64748b] text-[14px] md:text-[16px]">
+                    40%
+                  </span>
+                </div>
 
-        <div className="space-y-6">
-          {/* Progress Item */}
-          <div>
-            <div className="flex justify-between mb-2">
-              <h3 className="font-medium">Frontend Developer</h3>
-
-              <span className="text-sm text-gray-500">80%</span>
-            </div>
-
-            <div className="w-full bg-gray-200 rounded-full h-3">
-              <div className="bg-green-500 h-3 rounded-full w-[80%]"></div>
-            </div>
-          </div>
-
-          <div>
-            <div className="flex justify-between mb-2">
-              <h3 className="font-medium">MERN Stack Developer</h3>
-
-              <span className="text-sm text-gray-500">60%</span>
-            </div>
-
-            <div className="w-full bg-gray-200 rounded-full h-3">
-              <div className="bg-blue-500 h-3 rounded-full w-[60%]"></div>
-            </div>
-          </div>
-
-          <div>
-            <div className="flex justify-between mb-2">
-              <h3 className="font-medium">React Developer</h3>
-
-              <span className="text-sm text-gray-500">40%</span>
-            </div>
-
-            <div className="w-full bg-gray-200 rounded-full h-3">
-              <div className="bg-yellow-500 h-3 rounded-full w-[40%]"></div>
+                <div className="w-full bg-gray-200 rounded-full h-3">
+                  <div className="bg-[#f3a600] h-3 rounded-full w-[40%]"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

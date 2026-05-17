@@ -5,7 +5,7 @@ import DashSideNav from "../components/Dashboard/DashSideNav";
 
 const Dashboard = () => {
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col bg-gray-50 h-screen w-full">
       <div className="st sticky top-0 left-0 z-50">
         <DashTopNav />
       </div>
