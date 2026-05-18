@@ -18,7 +18,7 @@ const DashSideNav = () => {
   const [role, setRole] = useState("candidate");
 
   return (
-    <div className="h-screen lg:w-[25%] 2xl:w-[20%] fixed bg-[#ffffff]">
+    <div className="h-screen lg:w-[25%] 2xl:w-[20%] fixed bg-[#f8f8f8]">
       <div className="pt-8 pb-6 px-6 lg:px-7 2xl:px-8 flex flex-col items-center justify-center gap-2">
         <img className="h-50 w-50 rounded-full" src={profile} alt="" />
         <h4 className="lg:text-[22px] 2xl:text-[25px] lg:font-semibold 2xl:font-bold uppercase">

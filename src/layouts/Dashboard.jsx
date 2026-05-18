@@ -5,11 +5,11 @@ import DashSideNav from "../components/Dashboard/DashSideNav";
 
 const Dashboard = () => {
   return (
-    <div className="flex flex-col bg-gray-50 h-screen w-full">
-      <div className="st sticky top-0 left-0 z-50">
+    <div className="flex flex-col h-full w-full">
+      <div className="sticky top-0 left-0 z-50">
         <DashTopNav />
       </div>
-      <div className="flex justify-between bg-[#f8f8f8]">
+      <div className="flex justify-between">
         <div className="hidden lg:inline-block">
           <DashSideNav />
         </div>
