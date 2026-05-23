@@ -274,70 +274,199 @@ const CreateResumes = () => {
           </div>
         </div>
 
-        {/* Education Information */}
+        {/* Work Exprience */}
         <div className="bg-[#ffff] p-4 lg:p-5 2xl:p-6 companie-card border border-[#cccccc5d] rounded-2xl">
           <div className="border-b border-[#64748b28] pb-2 lg:pb-3">
             <h2 className="text-[16px] md:text-[18px] lg:text-[20px] font-semibold flex items-center gap-3">
-              <FaGraduationCap /> Education
+              <FaBriefcase /> Work Experience
             </h2>
           </div>
           <div className="pt-4 grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 lg:gap-5 2xl:gap-6">
-            {/* Institute Name */}
+            {/* Company Name */}
             <div className="flex flex-col gap-2">
               <lable className="text-[14px] lg:text-[16px] font-medium">
-                Institute Name
+                Company Name
+              </lable>
+              <input
+                required
+                className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
+                type="text"
+                placeholder="Company Name"
+              />
+            </div>
+            {/* Position */}
+            <div className="flex flex-col gap-2">
+              <lable className="text-[14px] lg:text-[16px] font-medium">
+                Position
+              </lable>
+              <input
+                required
+                className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
+                type="text"
+                placeholder="Position"
+              />
+            </div>
+            {/* Start Date */}
+            <div className="flex flex-col gap-2">
+              <lable className="text-[14px] lg:text-[16px] font-medium">
+                Start Date
+              </lable>
+              <input
+                required
+                className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
+                type="date"
+              />
+            </div>
+            {/* End Date */}
+            <div className="flex flex-col gap-2">
+              <lable className="text-[14px] lg:text-[16px] font-medium">
+                End Date
+              </lable>
+              <input
+                required
+                className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
+                type="date"
+              />
+            </div>
+            {/* Responsibilities */}
+            <div className="flex flex-col gap-2 col-span-2">
+              <lable className="text-[14px] lg:text-[16px] font-medium">
+                Responsibilities
+              </lable>
+              <textarea
+                rows={4}
+                required
+                className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
+                placeholder="Responsibilities"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Project */}
+        <div className="bg-[#ffff] p-4 lg:p-5 2xl:p-6 companie-card border border-[#cccccc5d] rounded-2xl">
+          <div className="border-b border-[#64748b28] pb-2 lg:pb-3">
+            <h2 className="text-[16px] md:text-[18px] lg:text-[20px] font-semibold flex items-center gap-3">
+              <FaProjectDiagram /> Projects
+            </h2>
+          </div>
+          <div className="pt-4 grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 lg:gap-5 2xl:gap-6">
+            {/* Project Name */}
+            <div className="flex flex-col gap-2">
+              <lable className="text-[14px] lg:text-[16px] font-medium">
+                Project Name
+              </lable>
+              <input
+                required
+                className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
+                type="text"
+                placeholder="Project Name"
+              />
+            </div>
+            {/* Project Live Link */}
+            <div className="flex flex-col gap-2">
+              <lable className="text-[14px] lg:text-[16px] font-medium">
+                Project Live Link
+              </lable>
+              <input
+                required
+                className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
+                type="text"
+                placeholder="Project Live Link"
+              />
+            </div>
+            {/* Project Description */}
+            <div className="flex flex-col gap-2 col-span-2">
+              <lable className="text-[14px] lg:text-[16px] font-medium">
+                Responsibilities
+              </lable>
+              <textarea
+                rows={4}
+                required
+                className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
+                placeholder="Project Description"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Additional Information */}
+        <div className="bg-[#ffff] p-4 lg:p-5 2xl:p-6 companie-card border border-[#cccccc5d] rounded-2xl">
+          <div className="border-b border-[#64748b28] pb-2 lg:pb-3">
+            <h2 className="text-[16px] md:text-[18px] lg:text-[20px] font-semibold flex items-center gap-3">
+              <FaCertificate /> Additional Information
+            </h2>
+          </div>
+          <div className="pt-4 grid grid-cols-1 gap-3 md:gap-4 lg:gap-5 2xl:gap-6">
+            {/* Languages */}
+            <div className="flex flex-col gap-2 col-span-2">
+              <lable className="text-[14px] lg:text-[16px] font-medium">
+                Languages
+              </lable>
+              <textarea
+                rows={4}
+                required
+                className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
+                placeholder="Languages"
+              />
+            </div>
+            {/* Certifications */}
+            <div className="flex flex-col gap-2 col-span-2">
+              <lable className="text-[14px] lg:text-[16px] font-medium">
+                Certifications
+              </lable>
+              <textarea
+                rows={4}
+                required
+                className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
+                placeholder="Certifications"
+              />
+            </div>
+          </div>
+        </div>
+
+        {/* Basic Information */}
+        <div className="bg-[#ffff] p-4 lg:p-5 2xl:p-6 companie-card border border-[#cccccc5d] rounded-2xl">
+          <div className="border-b border-[#64748b28] pb-2 lg:pb-3">
+            <h2 className="text-[16px] md:text-[18px] lg:text-[20px] font-semibold flex items-center gap-3">
+              <FaUsers /> References
+            </h2>
+          </div>
+          <div className="pt-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4 lg:gap-5 2xl:gap-6">
+            {/* References Name */}
+            <div className="flex flex-col gap-2">
+              <lable className="text-[14px] lg:text-[16px] font-medium">
+                References Name
+              </lable>
+              <input
+                required
+                className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
+                type="text"
+                placeholder="References Name"
+              />
+            </div>
+            {/* References Position */}
+            <div className="flex flex-col gap-2">
+              <lable className="text-[14px] lg:text-[16px] font-medium">
+                References Position
+              </lable>
+              <input
+                required
+                className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
+                type="email"
+                placeholder="References Position"
+              />
+            </div>
+            {/* References Contact */}
+            <div className="flex flex-col gap-2">
+              <lable className="text-[14px] lg:text-[16px] font-medium">
+                References Contact
               </lable>
               <input
                 required
                 className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
                 type="number"
-                placeholder="Enter Your Institute Name"
-              />
-            </div>
-            {/* Degree */}
-            <div className="flex flex-col gap-2">
-              <lable className="text-[14px] lg:text-[16px] font-medium">
-                Degree
-              </lable>
-              <input
-                required
-                className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
-                type="text"
-                placeholder="Your Degree"
-              />
-            </div>
-            {/* Field of Study */}
-            <div className="flex flex-col gap-2">
-              <lable className="text-[14px] lg:text-[16px] font-medium">
-                Field of Study
-              </lable>
-              <input
-                required
-                className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
-                type="text"
-                placeholder="Field of Study"
-              />
-            </div>
-            {/* Education Start Date */}
-            <div className="flex flex-col gap-2">
-              <lable className="text-[14px] lg:text-[16px] font-medium">
-                Education Start Date
-              </lable>
-              <input
-                required
-                className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
-                type="date"
-              />
-            </div>
-            {/* Education End Date */}
-            <div className="flex flex-col gap-2">
-              <lable className="text-[14px] lg:text-[16px] font-medium">
-                Education End Date
-              </lable>
-              <input
-                required
-                className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
-                type="date"
+                placeholder="References Contact"
               />
             </div>
           </div>

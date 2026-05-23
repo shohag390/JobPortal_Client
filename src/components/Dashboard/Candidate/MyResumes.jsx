@@ -11,7 +11,9 @@ import {
   FaCode,
   FaLanguage,
   FaCertificate,
+  FaArrowRight,
 } from "react-icons/fa";
+import DashboardHeader from "../DashboardHeader";
 
 const MyResumes = () => {
   const resume = {
@@ -61,13 +63,6 @@ const MyResumes = () => {
           "A multi-vendor medicine selling platform with admin, seller, and user dashboard.",
         link: "https://medik-classicshops.netlify.app/",
       },
-
-      {
-        name: "Job Portal Website",
-        description:
-          "Responsive job portal with Firebase authentication and role-based dashboard.",
-        link: "https://job-portal-by-shohag.netlify.app/",
-      },
     ],
 
     languages: ["Bangla", "English"],
@@ -79,195 +74,154 @@ const MyResumes = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 py-10 px-4">
-      <div className="max-w-6xl mx-auto bg-white shadow-2xl rounded-3xl overflow-hidden">
-        {/* ================= HEADER ================= */}
-        <div className="bg-black text-white p-10">
-          <h1 className="text-4xl md:text-5xl font-bold">{resume.fullName}</h1>
+    <div className="px-6 lg:px-7 2xl:px-8 pb-3 md:pb-4 lg:pb-6">
+      <DashboardHeader
+        title={"My Resume"}
+        subTitle={"Innovative, Collaborative, Growth-Focused Team"}
+      />
 
-          <p className="text-xl text-gray-300 mt-2">{resume.jobTitle}</p>
-
-          {/* Contact Info */}
-          <div className="grid md:grid-cols-3 gap-4 mt-8 text-sm">
-            <div className="flex items-center gap-3">
-              <FaEnvelope />
-              <span>{resume.email}</span>
+      <div className="grid grid-cols-1 gap-3 md:gap-4 lg:gap-5 2xl:gap-6">
+        {/* Resume Header */}
+        <div className="bg-[#ffff] p-4 lg:p-5 2xl:p-6 companie-card border border-[#cccccc5d] rounded-2xl flex flex-col lg:flex-row lg:justify-between gap-4 lg:gap-0">
+          <div>
+            <h1 className="md:font-medium lg:font-semibold 2xl:font-bold text-[18px] md:text-[20px] lg:text-[22px] 2xl:text-[25px] uppercase">
+              {resume.fullName}
+            </h1>
+            <p className="font-medium text-[#64748b] pb-2">{resume.jobTitle}</p>
+            <div className="flex items-center gap-2">
+              <a href="#">Linkedin</a>
+              <span>|</span>
+              <a href="#">Portfolio</a>
+              <span>|</span>
+              <a href="#">GitHub</a>
             </div>
-
-            <div className="flex items-center gap-3">
+          </div>
+          <div>
+            <p className="text-[14px] md:text-[16px] text-[#64748b] flex items-center gap-2">
               <FaPhoneAlt />
-              <span>{resume.phone}</span>
-            </div>
-
-            <div className="flex items-center gap-3">
+              {resume.phone}
+            </p>
+            <p className="text-[14px] md:text-[16px] text-[#64748b] flex items-center gap-2">
+              <FaEnvelope />
+              {resume.email}
+            </p>
+            <p className="text-[14px] md:text-[16px] text-[#64748b] flex items-center gap-2">
               <FaMapMarkerAlt />
-              <span>{resume.address}</span>
-            </div>
-
-            <div className="flex items-center gap-3">
-              <FaLinkedin />
-              <span>{resume.linkedin}</span>
-            </div>
-
-            <div className="flex items-center gap-3">
-              <FaGithub />
-              <span>{resume.github}</span>
-            </div>
-
-            <div className="flex items-center gap-3">
-              <FaGlobe />
-              <span>{resume.website}</span>
-            </div>
+              {resume.address}
+            </p>
           </div>
         </div>
 
-        {/* ================= BODY ================= */}
-        <div className="grid lg:grid-cols-3">
-          {/* LEFT SIDE */}
-          <div className="bg-gray-50 p-8 border-r">
-            {/* Skills */}
-            <section className="mb-10">
-              <h2 className="flex items-center gap-3 text-2xl font-bold mb-5">
-                <FaCode />
-                Skills
-              </h2>
+        {/* Career Objctive */}
+        <div className="bg-[#ffff] p-4 lg:p-5 2xl:p-6 companie-card border border-[#cccccc5d] rounded-2xl">
+          <h4 className="text-[16px] md:text-[18px] lg:text-[20px] font-semibold pb-3">
+            Career Objctive
+          </h4>
+          <p className="text-[14px] md:text-[16px] text-[#64748b]">
+            {resume.summary}
+          </p>
+        </div>
 
-              <div className="flex flex-wrap gap-3">
-                {resume.skills.map((skill, index) => (
-                  <span
-                    key={index}
-                    className="bg-black text-white px-4 py-2 rounded-full text-sm"
-                  >
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </section>
-
-            {/* Languages */}
-            <section className="mb-10">
-              <h2 className="flex items-center gap-3 text-2xl font-bold mb-5">
-                <FaLanguage />
-                Languages
-              </h2>
-
-              <div className="space-y-3">
-                {resume.languages.map((language, index) => (
-                  <div
-                    key={index}
-                    className="bg-white shadow rounded-xl px-4 py-3"
-                  >
-                    {language}
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* Certifications */}
-            <section>
-              <h2 className="flex items-center gap-3 text-2xl font-bold mb-5">
-                <FaCertificate />
-                Certifications
-              </h2>
-
-              <div className="space-y-3">
-                {resume.certifications.map((certificate, index) => (
-                  <div
-                    key={index}
-                    className="bg-white shadow rounded-xl px-4 py-3"
-                  >
-                    {certificate}
-                  </div>
-                ))}
-              </div>
-            </section>
+        {/* My Skills */}
+        <div className="bg-[#ffff] p-4 lg:p-5 2xl:p-6 companie-card border border-[#cccccc5d] rounded-2xl">
+          <h4 className="text-[16px] md:text-[18px] lg:text-[20px] font-semibold pb-3">
+            My Skills
+          </h4>
+          <div className="text-[14px] md:text-[16px] text-[#64748b] flex items-center flex-wrap gap-2 md:gap-3 lg:gap-4">
+            {resume.skills.map((skill, index) => (
+              <span
+                key={index}
+                className="px-4 py-2 bg-[#1d4fd841] text-[#003ad8] rounded-full"
+              >
+                {skill}
+              </span>
+            ))}
           </div>
+        </div>
 
-          {/* RIGHT SIDE */}
-          <div className="lg:col-span-2 p-8">
-            {/* Summary */}
-            <section className="mb-12">
-              <h2 className="text-3xl font-bold mb-5">Profile Summary</h2>
+        {/* PROJECTS */}
+        <div className="bg-[#ffff] p-4 lg:p-5 2xl:p-6 companie-card border border-[#cccccc5d] rounded-2xl">
+          <h2 className="text-[16px] md:text-[18px] lg:text-[20px] font-semibold pb-3">
+            Projects
+          </h2>
 
-              <p className="text-gray-700 leading-8">{resume.summary}</p>
-            </section>
-
-            {/* Experience */}
-            <section className="mb-12">
-              <h2 className="flex items-center gap-3 text-3xl font-bold mb-6">
-                <FaBriefcase />
-                Experience
-              </h2>
-
-              <div className="border-l-4 border-black pl-6">
-                <h3 className="text-2xl font-semibold">
-                  {resume.experience.position}
+          <div className="">
+            {resume.projects.map((project, index) => (
+              <div key={index} className="">
+                <h3 className="text-[14px] md:text-[16px] font-medium">
+                  {project.name}
                 </h3>
 
-                <p className="text-gray-500 mt-1">
-                  {resume.experience.company} | {resume.experience.duration}
+                <p className="text-[14px] md:text-[16px] text-[#64748b] pb-2">
+                  {project.description}
                 </p>
 
-                <p className="mt-4 text-gray-700 leading-7">
-                  {resume.experience.responsibilities}
-                </p>
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="bg-[#1d4fd841] hover:bg-[#003ad8] w-40 h-10 rounded-full text-[#003ad8] hover:text-[#ffff] text-[14px] md:text-[16px] flex items-center justify-center gap-2 duration-500"
+                >
+                  Live Project
+                  <FaArrowRight />
+                </a>
               </div>
-            </section>
+            ))}
+          </div>
+        </div>
 
-            {/* Education */}
-            <section className="mb-12">
-              <h2 className="flex items-center gap-3 text-3xl font-bold mb-6">
-                <FaGraduationCap />
-                Education
-              </h2>
+        {/* EXPERIENCE */}
+        <div className="bg-[#ffff] p-4 lg:p-5 2xl:p-6 companie-card border border-[#cccccc5d] rounded-2xl">
+          <h2 className="text-[16px] md:text-[18px] lg:text-[20px] font-semibold pb-3">
+            Experience
+          </h2>
+          <div className="">
+            <h3 className="text-[14px] md:text-[16px] font-medium">
+              {resume.experience.position}
+            </h3>
 
-              <div className="border-l-4 border-black pl-6">
-                <h3 className="text-2xl font-semibold">
-                  {resume.education.degree}
-                </h3>
+            <p className="">
+              {resume.experience.company} | {resume.experience.duration}
+            </p>
+            <p className="text-[14px] md:text-[16px] text-[#64748b] pt-2">
+              {resume.experience.responsibilities}
+            </p>
+          </div>
+        </div>
 
-                <p className="text-gray-500 mt-1">
-                  {resume.education.institute}
-                </p>
+        {/* CERTIFICATIONS */}
+        <div className="bg-[#ffff] p-4 lg:p-5 2xl:p-6 companie-card border border-[#cccccc5d] rounded-2xl">
+          <h2 className="text-[16px] md:text-[18px] lg:text-[20px] font-semibold pb-3">
+            Certifications
+          </h2>
 
-                <p className="mt-2 text-gray-700">{resume.education.field}</p>
-
-                <p className="text-sm text-gray-500 mt-2">
-                  {resume.education.duration}
-                </p>
+          <div className="text-[14px] md:text-[16px] text-[#64748b] flex items-center flex-wrap gap-2 md:gap-3 lg:gap-4">
+            {resume.certifications.map((certificate, index) => (
+              <div
+                key={index}
+                className="px-4 py-2 bg-[#1d4fd841] text-[#003ad8] rounded-full"
+              >
+                {certificate}
               </div>
-            </section>
+            ))}
+          </div>
+        </div>
 
-            {/* Projects */}
-            <section>
-              <h2 className="text-3xl font-bold mb-6">Projects</h2>
+        {/* Languages */}
+        <div className="bg-[#ffff] p-4 lg:p-5 2xl:p-6 companie-card border border-[#cccccc5d] rounded-2xl">
+          <h2 className="text-[16px] md:text-[18px] lg:text-[20px] font-semibold pb-3">
+            languages
+          </h2>
 
-              <div className="grid md:grid-cols-2 gap-6">
-                {resume.projects.map((project, index) => (
-                  <div
-                    key={index}
-                    className="border rounded-2xl p-6 hover:shadow-xl transition duration-300"
-                  >
-                    <h3 className="text-2xl font-semibold mb-3">
-                      {project.name}
-                    </h3>
-
-                    <p className="text-gray-600 leading-7">
-                      {project.description}
-                    </p>
-
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-block mt-5 bg-black text-white px-5 py-2 rounded-lg"
-                    >
-                      Live Project
-                    </a>
-                  </div>
-                ))}
+          <div className="text-[14px] md:text-[16px] text-[#64748b] flex items-center flex-wrap gap-2 md:gap-3 lg:gap-4">
+            {resume.languages.map((language, index) => (
+              <div
+                key={index}
+                className="px-4 py-2 bg-[#1d4fd841] text-[#003ad8] rounded-full"
+              >
+                {language}
               </div>
-            </section>
+            ))}
           </div>
         </div>
       </div>
