@@ -8,6 +8,7 @@ import SocialLogin from "./SocialLogin";
 const SignIn = () => {
   const { signInUser } = use(AuthContext);
   const navigate = useNavigate();
+  const from = location.state || "/";
 
   const handleSignIn = (e) => {
     e.preventDefault();
@@ -20,7 +21,7 @@ const SignIn = () => {
       .then((result) => {
         if (result.user) {
           toast.success("User Login Successfully!");
-          navigate("/");
+          navigate(from);
         }
       })
       .catch((error) => {
@@ -88,7 +89,7 @@ const SignIn = () => {
             <div className="h-0.5 w-full bg-[#64748b21]"></div>
           </div>
 
-          <SocialLogin />
+          <SocialLogin from={from} />
 
           <p className="text-center">
             Don't have an account yet ? <Link to={"/sign-up"}>Sign Up</Link>

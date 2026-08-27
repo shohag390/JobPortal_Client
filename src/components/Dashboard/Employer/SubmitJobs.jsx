@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import {
   FaBriefcase,
   FaBuilding,
@@ -6,13 +5,71 @@ import {
   FaMoneyBill,
   FaClock,
   FaUsers,
-  FaGlobe,
-  FaCertificate,
   FaTools,
 } from "react-icons/fa";
 import DashboardHeader from "../DashboardHeader";
+import useAuth from "../../../hooks/useAuth";
+import axios from "axios";
+import { toast } from "react-toastify";
 
 const SubmitJobs = () => {
+  const { user } = useAuth();
+
+  const handleAddJob = (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const fromData = new FormData(form);
+    const data = Object.fromEntries(fromData.entries());
+
+    // process salary range
+    const { min, max, currency, ...newJob } = data;
+    newJob.salaryRange = { min, max, currency };
+
+    // process requirements
+    const requirementString = newJob.requirements;
+    const requirementDrity = requirementString.split(",");
+    const requirementClean = requirementDrity.map((req) => req.trim());
+    newJob.requirements = requirementClean;
+
+    // process responsibilities
+    const responsibilitieString = newJob.responsibilities;
+    const responsibilitieDrity = responsibilitieString.split(",");
+    const responsibilitiesClean = responsibilitieDrity.map((req) => req.trim());
+    newJob.responsibilities = responsibilitiesClean;
+
+    // process benefits
+    const benefitsString = newJob.benefits;
+    const benefitsDrity = benefitsString.split(",");
+    const benefitsClean = benefitsDrity.map((req) => req.trim());
+    newJob.benefits = benefitsClean;
+
+    // process skills
+    const skillsString = newJob.skills;
+    const skillsDrity = skillsString.split(",");
+    const skillsClean = skillsDrity.map((req) => req.trim());
+    newJob.skills = skillsClean;
+
+    // process languages
+    const languagesString = newJob.languages;
+    const languagessDrity = languagesString.split(",");
+    const languagesClean = languagessDrity.map((req) => req.trim());
+    newJob.languages = languagesClean;
+    newJob.user = user?.email;
+
+    // save job to the database
+    axios
+      .post(`http://localhost:3000/jobs`, newJob)
+      .then((res) => {
+        if (res.data.insertedId) {
+          toast.success("Job Post Successfully");
+          form.reset();
+        }
+      })
+      .catch((error) => {
+        toast.error("Something Wrong!");
+      });
+  };
+
   return (
     <div className="px-6 lg:px-7 2xl:px-8">
       <DashboardHeader
@@ -20,7 +77,10 @@ const SubmitJobs = () => {
         subTitle={"Innovative, Collaborative, Growth-Focused Team"}
       />
       {/* Form */}
-      <form className="flex flex-col gap-3 md:gap-4 lg:gap-5 2xl:gap-6 pb-6">
+      <form
+        onSubmit={handleAddJob}
+        className="flex flex-col gap-3 md:gap-4 lg:gap-5 2xl:gap-6 pb-6"
+      >
         {/* Basic Information */}
         <div className="bg-[#ffff] p-4 lg:p-5 2xl:p-6 companie-card border border-[#cccccc5d] rounded-2xl">
           <div className="border-b border-[#64748b28] pb-2 lg:pb-3">
@@ -35,6 +95,7 @@ const SubmitJobs = () => {
               </lable>
               <input
                 required
+                name="jobTitle"
                 className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
                 type="text"
                 placeholder="Enter Job Title"
@@ -46,6 +107,7 @@ const SubmitJobs = () => {
               </lable>
               <input
                 required
+                name="companyName"
                 className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
                 type="text"
                 placeholder="Enter Company Name"
@@ -57,6 +119,7 @@ const SubmitJobs = () => {
               </lable>
               <input
                 required
+                name="category"
                 className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
                 type="text"
                 placeholder="Enter Category"
@@ -68,6 +131,7 @@ const SubmitJobs = () => {
               </lable>
               <input
                 required
+                name="companyLogo"
                 className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
                 type="text"
                 placeholder="Enter Coompany Logo URL"
@@ -79,6 +143,7 @@ const SubmitJobs = () => {
               </lable>
               <input
                 required
+                name="jobType"
                 className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
                 type="text"
                 placeholder="Enter Job Type"
@@ -90,6 +155,7 @@ const SubmitJobs = () => {
               </lable>
               <input
                 required
+                name="experience"
                 className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
                 type="text"
                 placeholder="Enter Experience"
@@ -112,6 +178,7 @@ const SubmitJobs = () => {
               </lable>
               <input
                 required
+                name="location"
                 className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
                 type="text"
                 placeholder="Enter Location"
@@ -123,6 +190,7 @@ const SubmitJobs = () => {
               </lable>
               <input
                 required
+                name="website"
                 className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
                 type="text"
                 placeholder="Enter Website URL"
@@ -134,6 +202,7 @@ const SubmitJobs = () => {
               </lable>
               <input
                 required
+                name="contactEmail"
                 className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
                 type="email"
                 placeholder="Enter Email"
@@ -156,6 +225,7 @@ const SubmitJobs = () => {
               </lable>
               <input
                 required
+                name="vacancy"
                 className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
                 type="number"
                 placeholder="Enter Vacancy"
@@ -167,6 +237,7 @@ const SubmitJobs = () => {
               </lable>
               <input
                 required
+                name="education"
                 className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
                 type="text"
                 placeholder="Enter Education"
@@ -178,6 +249,7 @@ const SubmitJobs = () => {
               </lable>
               <input
                 required
+                name="workingHours"
                 className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
                 type="text"
                 placeholder="Enter Working Hours"
@@ -200,6 +272,7 @@ const SubmitJobs = () => {
               </lable>
               <input
                 required
+                name="min"
                 className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
                 type="number"
                 placeholder="Enter Salary Min"
@@ -211,6 +284,7 @@ const SubmitJobs = () => {
               </lable>
               <input
                 required
+                name="max"
                 className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
                 type="number"
                 placeholder="Enter Salary Max"
@@ -218,13 +292,14 @@ const SubmitJobs = () => {
             </div>
             <div className="flex flex-col gap-2">
               <lable className="text-[14px] lg:text-[16px] font-medium">
-                Salary Type
+                Currency
               </lable>
               <input
                 required
+                name="currency"
                 className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
                 type="text"
-                placeholder="Enter Salary Type"
+                placeholder="Enter Currency Type"
               />
             </div>
           </div>
@@ -243,6 +318,7 @@ const SubmitJobs = () => {
               </lable>
               <input
                 required
+                name="applicationDeadline"
                 className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
                 type="date"
               />
@@ -264,6 +340,7 @@ const SubmitJobs = () => {
               <textarea
                 rows={4}
                 required
+                name="description"
                 className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
                 placeholder="Enter Description"
                 type="date"
@@ -276,8 +353,9 @@ const SubmitJobs = () => {
               <textarea
                 rows={4}
                 required
+                name="responsibilities"
                 className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
-                placeholder="Enter Responsibilities"
+                placeholder="Enter Responsibilities (separate by comma)"
                 type="date"
               />
             </div>
@@ -288,8 +366,9 @@ const SubmitJobs = () => {
               <textarea
                 rows={4}
                 required
+                name="requirements"
                 className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
-                placeholder="Enter Requirements"
+                placeholder="Enter Requirements (separate by comma)"
                 type="date"
               />
             </div>
@@ -310,8 +389,9 @@ const SubmitJobs = () => {
               <textarea
                 rows={4}
                 required
+                name="skills"
                 className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
-                placeholder="Enter Skills"
+                placeholder="Enter Skills (separate by comma)"
                 type="date"
               />
             </div>
@@ -322,8 +402,9 @@ const SubmitJobs = () => {
               <textarea
                 rows={4}
                 required
+                name="benefits"
                 className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
-                placeholder="Enter Benefits"
+                placeholder="Enter Benefits (separate by comma)"
                 type="date"
               />
             </div>
@@ -334,14 +415,18 @@ const SubmitJobs = () => {
               <textarea
                 rows={4}
                 required
+                name="languages"
                 className="border border-[#cccccc5d] bg-[#cccccc17] py-1.5 md:py-2 lg:py-3 focus:outline-0 px-2 lg:px-3 w-full rounded-lg"
-                placeholder="Enter Languages"
+                placeholder="Enter Languages (separate by comma)"
                 type="date"
               />
             </div>
           </div>
         </div>
-        <button className="bg-[#1d4ed8] hover:bg-[#003ad8] duration-500 py-1.5 md:py-2 lg:py-3 px-6 md:px-8 lg:px-10 rounded-lg w-50 text-[#ffff] text-[14px] md:text-[16px]">
+        <button
+          type="submit"
+          className="bg-[#1d4ed8] hover:bg-[#003ad8] duration-500 py-1.5 md:py-2 lg:py-3 px-6 md:px-8 lg:px-10 rounded-lg w-50 text-[#ffff] text-[14px] md:text-[16px]"
+        >
           Publish Job
         </button>
       </form>

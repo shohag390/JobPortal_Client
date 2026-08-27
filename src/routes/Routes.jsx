@@ -25,6 +25,7 @@ import MyJobs from "../components/Dashboard/Employer/MyJobs";
 import SubmitJobs from "../components/Dashboard/Employer/SubmitJobs";
 import JobApplicants from "../components/Dashboard/Employer/JobApplicants";
 import EmployerProfileUpdate from "../components/Dashboard/Employer/EmployerProfileUpdate";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -42,7 +43,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/jobs",
-        Component: Jobs,
+        element: (
+          <PrivateRoute>
+            <Jobs />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/blogs",
